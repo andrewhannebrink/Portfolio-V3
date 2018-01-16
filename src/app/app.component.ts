@@ -18,19 +18,8 @@ import { PostsService } from './posts/posts.service';
   styleUrls: [
     './app.component.scss'
   ],
-  template: `
-    <header>
-      <mat-toolbar color="primary">
-        <a [routerLink]="['/']" class="logotTxt">MEAN</a>
-        <a class="links" [routerLink]="['/posts']">Posts</a>
-        <a class="links" [routerLink]="['/react']">React</a>
-        <a class="links" href="/api/graphql">GraphQL browser</a>        
-      </mat-toolbar>
-    </header>
-    <router-outlet></router-outlet>
-    <footer>
-    </footer>
-  `,
+  templateUrl: './templates/app.template.html',
+
   providers: [PostsService]
 })
 export class AppComponent implements OnInit {
