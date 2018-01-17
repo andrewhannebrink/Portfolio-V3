@@ -1,3 +1,4 @@
+// From MEAN.io
 html, body{
   height: 100%;
   font-family: Arial, Helvetica, sans-serif
@@ -25,25 +26,65 @@ header{
 }
 }
 
-// My code after here //////
-.center {
-  padding: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: monospace;
-  font-size: 22px;
-  list-style-type: none;
+// Media Queries for Specific Devices //
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */
 }
 
-.tiny {
-  width: 20em;
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+/* Styles */
+}
+
+// My code after here //////
+* { 
+  margin: 0px;
+  padding: 0px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: 100vh;
+}
+
+.center {
+  display:grid;
+  grid-template-columns: repeat(5, 15vw);
+  grid-template-rows: repeat(7, 15vw);
+  grid-gap: 5vw;
+  font-family: monospace;
+  font-size: 18px;
+  margin: auto;
+  width: auto;
 }
 
 .medium {
   width: 100vh;
 }
 
-.box {
+.dotted {
   border-style: dotted;
   border-width: 1px;
 }
@@ -66,6 +107,9 @@ li {
   width: 200px;
   height: 200px;
   background-image: url("../assets/img/loading.svg")
+}
+
+.square {
 }
 
 }
