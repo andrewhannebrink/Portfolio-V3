@@ -171,14 +171,14 @@ h1 {
 }
 
 .three-d-scripting-square {
-  background-color: $color3;
+  background-color: $color2;
   color: $color1;
   grid-column: 6 / 8;
   grid-row: 8 / 10;
 }
 
 .face-recognition-square {
-  background-color: $color2;
+  background-color: $color3;
   color: $color5;
   grid-column: 4 / 6;
   grid-row: 6 / 8;
@@ -228,6 +228,19 @@ h1 {
 .vimeo-square {
   background-color: $color5;
   background-image: url("../assets/img/vimeo.svg");
+}
+
+.email-square {
+  background-color: $color1;
+  background-image: url("../assets/img/email.svg");
+}
+
+.upwork-square {
+  background-color: $color3;
+}
+
+.freelancer-square {
+  background-color: $color7;
 }
 
 .portfolio-menu-box {
