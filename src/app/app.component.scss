@@ -150,7 +150,7 @@ h1 {
 }
 
 .twitter-bot-square {
-  background-color: $color5;
+  background-color: $color6;
   color: $color1;
   grid-column: 5 / 7;
   grid-row: 4 / 6;
@@ -205,6 +205,31 @@ h1 {
   grid-row: 6 / 9;
 }
 
+.linkedin-square {
+  background-color: $color6;
+  background-image: url("../assets/img/linkedin.svg");
+}
+
+.github-square {
+  background-color: $color2;
+  background-image: url("../assets/img/github.svg");
+}
+
+.angellist-square {
+  background-color: $color7;
+  background-image: url("../assets/img/angellist.svg");
+}
+
+.twitter-square {
+  background-color: $color5;
+  background-image: url("../assets/img/twitter.svg");
+}
+
+.vimeo-square {
+  background-color: $color5;
+  background-image: url("../assets/img/vimeo.svg");
+}
+
 .portfolio-menu-box {
   background-color: $color4;
   display:flex;
@@ -214,14 +239,15 @@ h1 {
 }
 
 .size1 {
-  background-color: $color6;
+  background-size: cover;
+  padding: 5px;
 }
 
 .size2 {
-  font-size: 18px;
+  font-size: 4vw;
 }
 
 .size3 {
-  font-size: 30px;
+  font-size: 7vw;
 }
 }
