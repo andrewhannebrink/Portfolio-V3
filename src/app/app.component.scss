@@ -191,11 +191,11 @@ a {
 h1 { 
   color: $color1;
   font-weight: bold;
-  float: left;
-  margin: 30px;
+  margin: 10px;
+  text-align: left;
   animation: 1s ease-in 0s 1 slideInFromTop;
   @media (orientation: landscape) {
-    font-size: 4vw; 
+    font-size: 5.5vh; 
   }
   @media (orientation: portrait) {
     font-size: 8vw; 
@@ -214,6 +214,10 @@ h1 {
   text-align: left;
   justify-content: flex-end;
   padding: 5px;
+}
+
+.square:hover {  
+  background-color: $color3;
 }
 
 .resume-square {
@@ -288,7 +292,7 @@ h1 {
   animation: 1s ease-in 0s 1 slideInFromBottom;
 }
 
-.freelance-square {
+.professional-square {
   background-color: $color2;
   color: $color4;
   grid-column: 1 / 4;
@@ -348,6 +352,11 @@ h1 {
   flex-direction: column;
   height: 100vh;
   align-items: center;
+}
+
+.content {
+  background-color: $color4;
+  border-left: 15px solid $color1;
 }
 
 .size1 {
