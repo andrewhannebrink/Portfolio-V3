@@ -55,13 +55,13 @@ header{
 
 @mixin mainMenuGridPropertiesPortrait {
     grid-template-columns: repeat(7, 10vw);
-    grid-template-rows: repeat(10, 10vw);
+    grid-template-rows: repeat(9, 10vw);
     grid-gap: 3vw;
 }
 
 @mixin mainMenuGridPropertiesLandscape { 
     grid-template-columns: repeat(7, 6vh);
-    grid-template-rows: repeat(10, 6vh);
+    grid-template-rows: repeat(9, 6vh);
     grid-gap: 2vh;
 }
 
@@ -74,8 +74,6 @@ header{
 /* Smartphones (landscape) ----------- */
 @media only screen and (min-width : 321px) {
 /* Styles */
-  @mixin mainMenuGridProperties {
-  }
 }
 
 /* Smartphones (portrait) ----------- */
@@ -111,23 +109,43 @@ header{
   @media (orientation: landscape) {
     @include wrapperColumnsLandscape;
   }
+  /* Smartphones (landscape) ----------- */
+  @media only screen and (min-width : 321px) {
+    @include wrapperColumnsPortrait;
+  }
   @media (orientation: portrait) {
     @include wrapperColumnsPortrait;
+  }
+  /* iPads (landscape) ----------- */
+  @media only screen and (min-device-width : 768px) and (orientation : landscape) {
+    @include wrapperColumnsLandscape;
   }
 }
 
 .main-menu {
-  display:grid;
+  display: grid;
   font-weight: bold;
-  margin-top: 0px;
   margin: auto;
   padding: auto;
+  flex: 1;
 
   @media (orientation: landscape) {
+    padding-top: 35px;;
     @include mainMenuGridPropertiesLandscape;
   }
-  @media (orientation: portrait) {
+  /* Smartphones (landscape) ----------- */
+  @media only screen and (min-width : 321px) {
+    padding-top: 160px;;
     @include mainMenuGridPropertiesPortrait;
+  }
+  @media (orientation: portrait) {
+    padding-top: 160px;
+    @include mainMenuGridPropertiesPortrait;
+  }
+  /* iPads (landscape) ----------- */
+  @media only screen and (min-device-width : 768px) and (orientation : landscape) {
+    padding-top: 35px;;
+    @include mainMenuGridPropertiesLandscape;
   }
 }
 
@@ -179,11 +197,6 @@ header{
   width: 100vh;
 }
 
-.dotted {
-  border-style: dotted;
-  border-width: 1px;
-}
-
 a {
   text-decoration: none;
 }
@@ -192,14 +205,27 @@ h1 {
   color: $color1;
   font-weight: bold;
   margin: 10px;
-  text-align: left;
+  text-align: right;
   animation: 1s ease-in 0s 1 slideInFromTop;
   @media (orientation: landscape) {
     font-size: 5.5vh; 
   }
+  /* Smartphones (landscape) ----------- */
+  @media only screen and (min-width : 321px) {
+    font-size: 8vw;
+  }
   @media (orientation: portrait) {
     font-size: 8vw; 
   }
+  /* iPads (landscape) ----------- */
+  @media only screen and (min-device-width : 768px) and (orientation : landscape) {
+    font-size: 5.5vh; 
+  }
+}
+
+.title-box {
+  display: flex;
+  flex: 1;
 }
 
 .loading-icon {
@@ -352,6 +378,21 @@ h1 {
   flex-direction: column;
   height: 100vh;
   align-items: center;
+  justify-content: flex-beginning;
+}
+
+.my-name {
+  flex: 2;
+}
+.mission-statement {
+  color: $color1;
+  margin: 5px;
+  flex: 1;
+  border-left: 5px solid $color1;
+  min-height:100px;
+  padding: 5px;
+  font-size: 11px;
+  animation: 1s ease-in 0s 1 slideInFromRight;
 }
 
 .content {
@@ -368,8 +409,16 @@ h1 {
   @media (orientation: landscape) {
     font-size: 2.5vh;
   }
+  /* Smartphones (landscape) ----------- */
+  @media only screen and (min-width : 321px) {
+    font-size: 4.5vw;
+  }
   @media (orientation: portrait) {
     font-size: 4.5vw;
+  }
+  /* iPads (landscape) ----------- */
+  @media only screen and (min-device-width : 768px) and (orientation : landscape) {
+    font-size: 2.5vh;
   }
 }
 
@@ -377,8 +426,16 @@ h1 {
   @media (orientation: landscape) {
     font-size: 4.2vh;
   }
+  /* Smartphones (landscape) ----------- */
+  @media only screen and (min-width : 321px) {
+    font-size: 7vw;
+  }
   @media (orientation: portrait) {
     font-size: 7vw;
+  }
+  /* iPads (landscape) ----------- */
+  @media only screen and (min-device-width : 768px) and (orientation : landscape) {
+    font-size: 4.2vh;
   }
 }
 }
