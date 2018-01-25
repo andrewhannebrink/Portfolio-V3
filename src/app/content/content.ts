@@ -32,7 +32,7 @@ export const POSSIBLE_CONTENT: Content[] = [
     displayName: 'TinyIcon\nMosaic\nSelector',
     bannerImgUrl: '../assets/img/tiny_icon.png',
     year: '2015',
-    scope: 'Image Processing, Full-Stack Web Development, SaaS, Server-Side Automation',
+      scope: 'Image Processing, Full-Stack Web Development, API Construction, UI/UX Design, SaaS, Server-Side Automation',
     technologies: 'Angular 1, Express, Python, PIL, HTML, Canvas, CSS',
     description: ''
   },
@@ -45,7 +45,7 @@ export const POSSIBLE_CONTENT: Content[] = [
     bannerImgUrl: '../assets/img/three-d-scripting.png',
     year: '2015',
     scope: 'Video Art, Euclidean Geometry, Matrix Algebra, Object Oriented Programming',
-    technologies: 'Python, Blender, bpl (Blender-Python Module)
+    technologies: 'Python, Blender, bpl (Blender-Python Module)',
     description: ''
   },
   {
