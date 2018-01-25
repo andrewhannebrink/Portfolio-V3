@@ -7,7 +7,7 @@
       <strong>Technologies</strong><br>{{ currentContent.technologies }}
     </div>
   </div>
-  <div class="banner" [style.background]='getCurrentBannerCssUrlString()'></div>
+  <div class="banner" [style.backgroundImage]='getCurrentBannerBackgroundImageCss()' [style.backgroundRepeat]='getBannerRepeat()' [style.backgroundPosition]='getBannerPosition()'></div>
 </div>
 <div class="content-write-up-box">
   <p>{{ currentContent.description }}</p>

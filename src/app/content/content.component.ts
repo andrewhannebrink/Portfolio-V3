@@ -15,9 +15,30 @@ import 'rxjs/add/operator/pluck';
 export class ContentComponent implements OnInit {
   public currentContent: Content;
 
-  public getCurrentBannerCssUrlString: Function = function () {
-    return 'url("' + this.currentContent.bannerImgUrl + '")';
+  public getCurrentBannerBackgroundImageCss: Function = function(): string {
+    let styleStr = 'url("' + this.currentContent.bannerImgUrl + '")';
+    return styleStr; 
   };
+
+  public getBannerRepeat: Function = function(): string {
+    let styleStr = 'repeat';
+    if (this.currentContent.bannerImgUrl.includes('wustl')) {
+      styleStr = 'no-repeat';
+    }
+    return styleStr;
+  }
+
+  public getBannerPosition: Function = function(): string {
+    let styleStr = 'left top',
+        bannerImgUrl = this.currentContent.bannerImgUrl;
+    if (bannerImgUrl.includes('wustl')) {
+      styleStr = 'center';
+    } else if (bannerImgUrl.includes('three-d-scripting') || 
+        bannerImgUrl.includes('photo-mosaic-videos')) {
+      styleStr = 'left bottom'
+    }
+    return styleStr;
+  }
 
   constructor(private route: ActivatedRoute) {
   }
@@ -30,8 +51,8 @@ export class ContentComponent implements OnInit {
   }
  
   private getContent(urlName: string): void {
-    let i;
-    let currentContent = null;
+    let i,
+        currentContent = null;
     for (i = 0; i < POSSIBLE_CONTENT.length; i += 1) {
       if (POSSIBLE_CONTENT[i].urlName === urlName) {
         currentContent = POSSIBLE_CONTENT[i];

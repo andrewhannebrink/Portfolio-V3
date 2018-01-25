@@ -497,6 +497,7 @@ strong {
 
 .content-header {
   @include lateAnimation;
+  white-space: pre-wrap;
 }
 
 .content-title-box {
@@ -516,10 +517,6 @@ strong {
 .banner {
   flex: 3;
   height: 300px;
-    //linear-gradient(
-    //  #f8de3c20,
-    //  #f8de3cff
-    //),
   border: 5px solid $color1;
   animation: 1s ease-in 0s 1 slideInFromRight;
   @include lateAnimation;
