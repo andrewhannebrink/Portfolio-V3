@@ -9,9 +9,9 @@ import { DataResolver } from './app.resolver';
 
 export const ROUTES: Routes = [
   { path: '', component: ContentComponent },
-  { path: 'emoji-data-visualizer', component: ContentComponent },
+  { path: ':urlName', component: ContentComponent },
   { path: 'posts', loadChildren: './posts#PostsModule' },
   { path: 'content', component: ContentComponent },
   //{ path: 'react', component: ReactComponent },
-  { path: '**',    component: NoContentComponent },
+  { path: '**',    component: NoContentComponent }
 ];

@@ -516,12 +516,10 @@ strong {
 .banner {
   flex: 3;
   height: 300px;
-  background: 
     //linear-gradient(
     //  #f8de3c20,
     //  #f8de3cff
     //),
-    url("../assets/img/visualizer.png");
   border: 5px solid $color1;
   animation: 1s ease-in 0s 1 slideInFromRight;
   @include lateAnimation;

@@ -16,31 +16,31 @@
       <div class="square size3 resume-square">
         Resume
       </div>
-      <div class="square size3 emoji-data-visualizer-square">
+      <div class="square size3 emoji-data-visualizer-square" routerLink='emoji-data-visualizer'>
         Emoji Data Visualizer
       </div>
-      <div class="square size3 professional-square">
+      <div class="square size3 professional-square" routerLink="professional">
         Work
       </div>
-      <div class="square size2 tinyicon-square">
+      <div class="square size2 tinyicon-square" routerLink="tinyicon">
         Tinyicon
       </div>
-      <div class="square size2 twitter-bot-square">
+      <div class="square size2 twitter-bot-square" routerLink="twitter-bot">
         Twitter Bot
       </div>
-      <div class="square size2 photo-mosaic-video-square">
+      <div class="square size2 photo-mosaic-video-square" routerLink="photo-mosaic-videos">
         Photo-Mosaic Videos
       </div>
-      <div class="square size2 dhcp-lease-mgmt-square">
+      <div class="square size2 dhcp-lease-mgmt-square" routerLink="dhcp-lease-management">
         DHCP Lease MGMT
       </div>
-      <div class="square size2 face-recognition-square">
+      <div class="square size2 face-recognition-square" routerLink="face-detection">
         Face Detection
       </div>
-      <div class="square size2 access-point-monitoring-square">
+      <div class="square size2 access-point-monitoring-square" routerLink="access-point-monitoring">
         Access Point Monitor
       </div>
-      <div class="square size2 three-d-scripting-square">
+      <div class="square size2 three-d-scripting-square" routerLink="3d-scripting">
         3D Scripting
       </div>
       <!--TINY SQUARES ONLY AFTER HERE -->
@@ -54,7 +54,9 @@
       <div class="square size1 freelancer-square"></div>
     </div>
   </div>
-  <andrew-content class="content"></andrew-content>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
 </div>
     <!--<header>
       <mat-toolbar color="primary">
