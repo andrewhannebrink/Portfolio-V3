@@ -253,7 +253,7 @@ strong {
   display: flex;
   flex-direction: column;
   text-align: left;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding: 5px;
   transition: background-color 0.5s ease;
   cursor: crosshair;
@@ -265,6 +265,10 @@ strong {
 
 .square:active {
   transform: translateY(3px);
+}
+
+.square-year {
+  text-align: right;
 }
 
 .resume-square {
