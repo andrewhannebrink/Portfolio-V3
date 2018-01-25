@@ -13,7 +13,7 @@ import { ContentComponent, POSSIBLE_CONTENT } from './content';
 export class ContentComponent implements OnInit {
   currentContent: any;
   constructor() {
-    this.currentContent = POSSIBLE_CONTENT[1];
+    this.currentContent = POSSIBLE_CONTENT[2];
     this.currentContentName: 'emoji-data-visualizer';
     this.getCurrentBannerCssUrlString = function () {
       return 'url("' + this.currentContent.bannerImgUrl + '")';
