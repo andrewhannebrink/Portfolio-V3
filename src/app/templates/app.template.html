@@ -9,73 +9,98 @@
     <div class="title-box">
       <h1 class="my-name">Andrew<br>Hannebrink</h1>
       <p class="tiny mission-statement">
-        Full-stack engineer with experience ranging from building the world's second largest dating platform, to increasing the online presence of independent artists, small businesses, and ground-zero start-ups.
+        Full-stack engineer and consultant with experience ranging from building the world's second largest dating platform, to increasing the online presence of independent artists, small businesses, and ground-zero start-ups.
       </p>
     </div>
     <div class="main-menu">
-      <div class="square size3 resume-square">
+      <div class="square size3 professional-square" (click)="showSubMenu('professional')" *ngIf="!hiddenMainMenuItems['professional']">
+        Professional
+      </div>
+      <div class="square size3 consulting-square" *ngIf="!hiddenMainMenuItems.consulting">
+        Consulting 
+      </div>
+      <div class="square size3 front-end-square" *ngIf="!hiddenMainMenuItems.frontEnd">
+        Front-End 
+      </div>
+      <div class="square size3 back-end-square" *ngIf="!hiddenMainMenuItems.backEnd">
+        Back-End 
+      </div>
+      <div class="square size2 image-processing-square" *ngIf="!hiddenMainMenuItems.imageProcessing">
+        Image Processing 
+      </div>
+      <div class="square size3 personal-projects-square" *ngIf="!hiddenMainMenuItems.personalProjects">
+        Personal Projects 
+      </div>
+      <!--TINY SQUARES ONLY AFTER HERE -->
+      <div class="square size1 home-square" (click)="showMainMenu()"></div>
+      <div class="square size1 resume-icon-square"></div>
+      <div class="square size1 email-square"></div>
+      <div class="square size1 linkedin-square"></div>
+      <div class="square size1 github-square"></div>
+      <div class="square size1 angellist-square"></div>
+      <!--<div class="square size1 twitter-square"></div>-->
+      <!--<div class="square size1 vimeo-square"></div>-->
+
+      <!-- FILLER RECTANGLES AND SQUARES -->
+      <div class="square filler-square-1" *ngIf="!hiddenMainMenuItems.filler"></div>
+      <div class="square filler-square-2" *ngIf="!hiddenMainMenuItems.filler"></div>
+      <div class="square filler-square-3" *ngIf="!hiddenMainMenuItems.filler"></div>
+      <div class="square filler-square-4" *ngIf="!hiddenMainMenuItems.filler"></div>
+      <div class="square filler-square-5" *ngIf="!hiddenMainMenuItems.filler"></div>
+      <div class="square filler-square-6" *ngIf="!hiddenMainMenuItems.filler"></div>
+
+      <!--Project Squares-->
+      <div *ngIf="false" class="square size3 resume-square">
         Resume
       </div>
-      <div class="square size3 emoji-data-visualizer-square" routerLink='emoji-data-visualizer'>
+      <div *ngIf="false" class="square size3 emoji-data-visualizer-square" routerLink='emoji-data-visualizer'>
         <div class="square-year">
           '16
         </div>
         Emoji Data Visualizer
       </div>
-      <div class="square size3 professional-square" routerLink="professional">
-        Work
-      </div>
-      <div class="square size2 tinyicon-square" routerLink="tinyicon">
+      <div *ngIf="false" class="square square-with-year size2 tinyicon-square" routerLink="tinyicon">
         <div class="square-year">
           '15
         </div>
         Tinyicon
       </div>
-      <div class="square size2 twitter-bot-square" routerLink="twitter-bot">
+      <div *ngIf="false" class="square size2 twitter-bot-square" routerLink="twitter-bot">
         <div class="square-year">
           '15-'18
         </div>
         Twitter Bot
       </div>
-      <div class="square size2 photo-mosaic-video-square" routerLink="photo-mosaic-videos">
+      <div *ngIf="false" class="square size2 photo-mosaic-video-square" routerLink="photo-mosaic-videos">
         <div class="square-year">
           '14
         </div>
         Photo-Mosaic Videos
       </div>
-      <div class="square size2 dhcp-lease-mgmt-square" routerLink="dhcp-lease-management">
+      <div *ngIf="false" class="square size2 dhcp-lease-mgmt-square" routerLink="dhcp-lease-management">
         <div class="square-year">
           '14
         </div>
         DHCP Lease MGMT
       </div>
-      <div class="square size2 face-recognition-square" routerLink="face-detection">
+      <div *ngIf="false" class="square size2 face-recognition-square" routerLink="face-detection">
         <div class="square-year">
           '13
         </div>
         Face Detection
       </div>
-      <div class="square size2 access-point-monitoring-square" routerLink="access-point-monitoring">
+      <div *ngIf="false" class="square size2 access-point-monitoring-square" routerLink="access-point-monitoring">
         <div class="square-year">
           '14
         </div>
         Access Point Monitor
       </div>
-      <div class="square size2 three-d-scripting-square" routerLink="3d-scripting">
+      <div *ngIf="false" class="square size2 three-d-scripting-square" routerLink="3d-scripting">
         <div class="square-year">
           '15
         </div>
         3D Scripting
       </div>
-      <!--TINY SQUARES ONLY AFTER HERE -->
-      <div class="square size1 linkedin-square"></div>
-      <div class="square size1 github-square"></div>
-      <div class="square size1 angellist-square"></div>
-      <div class="square size1 twitter-square"></div>
-      <div class="square size1 vimeo-square"></div>
-      <div class="square size1 email-square"></div>
-      <div class="square size1 upwork-square"></div>
-      <div class="square size1 freelancer-square"></div>
     </div>
   </div>
   <div class="content">

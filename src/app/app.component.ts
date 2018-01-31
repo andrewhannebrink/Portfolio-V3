@@ -23,18 +23,156 @@ import { PostsService } from './posts/posts.service';
   providers: [PostsService]
 })
 export class AppComponent implements OnInit {
-  public angularclassLogo = 'assets/img/angularclass-avatar.png';
-  public name = 'Mean stack starter';
-  public url = 'https://mean.io';
 
   constructor(
     public appState: AppState
   ) { }
 
+
+  public hiddenMainMenuItems = {
+    professional: false,
+    consulting: false,
+    frontEnd: false,
+    backEnd: false,
+    imageProcessing: false,
+    personalProjects: false,
+    filler: false
+  }
+
+  public hiddenSubMenus = {
+    professional: true,
+    consulting: true,
+    frontEnd: true,
+    backEnd: true,
+    imageProcessing: true,
+    personalProjects: true
+  }
+
+  public hideAllBut(menuItem: string): void {
+    let p;
+    for (p in this.hiddenMainMenuItems) {
+      if (this.hiddenMainMenuItems.hasOwnProperty(p)) {
+        if (p !== menuItem) {
+          this.hiddenMainMenuItems[p] = true;
+        } else {
+          this.hiddenMainMenuItems[p] = false;
+        }
+      }
+    }
+  }
+
+  public showAllMainMenuItems(): void {
+    let p;
+    for (p in this.hiddenMainMenuItems) {
+      if (this.hiddenMainMenuItems.hasOwnProperty(p)) {
+        this.hiddenMainMenuItems[p] = false;
+      }
+    }
+  }
+
+  public hideAllSubMenus(): void {
+    let p;
+    for (p in this.hiddenSubMenus) {
+      if (this.hiddenSubMenus.hasOwnProperty(p)) {
+        this.hiddenSubMenus[p] = true;
+      }
+    }
+  }
+
+  public showSubMenu(menuItem: string): void {
+    this.hideAllBut(menuItem);
+    const gridPositions = this.getSubMenuGridPositions(menuItem);
+  }
+
+  public getSubMenuGridPositions(menuItem: string): string[] {
+    const n = MenuRelations[menuItem].length;
+    
+    return ['',''];
+  }
+
+  public showMainMenu(): void {
+    this.hideAllSubMenus();
+    this.showAllMainMenuItems();
+  }
+
   public ngOnInit() {
     console.log('Initial App State', this.appState.state);
   }
 
+}
+
+export const SubMenuItemsEnum = {
+  CHAMROSH : 'chamrosh',
+  FENATURE : 'fenature',
+  PARTY_STORE: 'party-store',
+  EMOJI_DATA_VISUALIZER : 'emoji-data-visualizer',
+  TINYICON : 'tinyicon',
+  THREE_D_SCRIPTING : '3d-scripting',
+  TWITTER_BOT : 'twitter-bot',
+  PHOTO_MOSAIC_VIDEOS : 'photo-mosaic-videos',
+  DHCP_LEASE_MANAGEMENT : 'dhcp-lease-management',
+  ACCESS_POINT_MONITORING : 'access-point-monitoring',
+  FACE_DETECTION : 'face-detection',
+  ZOOSK : 'zoosk',
+  WICKR : 'wickr',
+  TWIN_PRIME : 'twin-prime',
+  WUSTL: 'wustl',
+  SERVICES: 'services',
+};
+
+export const MenuRelations = {
+  professional: [
+    //SubMenuItemsEnum.FENATURE,
+    //SubMenuItemsEnum.CHAMROSH,
+    SubMenuItemsEnum.ZOOSK,
+    SubMenuItemsEnum.WICKR,
+    SubMenuItemsEnum.TWIN_PRIME,
+    SubMenuItemsEnum.PHOTO_MOSAIC_VIDEOS,
+    SubMenuItemsEnum.WUSTL,
+    SubMenuItemsEnum.DHCP_LEASE_MANAGEMENT,
+    SubMenuItemsEnum.ACCESS_POINT_MONITORING
+  ],
+  consulting: [
+    //SubMenuItemsEnum.FENATURE,
+    //SubMenuItemsEnum.CHAMROSH,
+    //SubMenuItemsEnum.PARTY-STORE,
+    SubMenuItemsEnum.SERVICES
+  ],
+  frontEnd: [
+    //SubMenuItemsEnum.FENATURE,
+    //SubMenuItemsEnum.CHAMROSH,
+    //SubMenuItemsEnum.PARTY-STORE,
+    SubMenuItemsEnum.EMOJI_DATA_VISUALIZER,
+    SubMenuItemsEnum.ZOOSK,
+    SubMenuItemsEnum.WICKR,
+    SubMenuItemsEnum.TWIN_PRIME,
+    SubMenuItemsEnum.TINYICON
+  ], 
+  backEnd: [
+    //SubMenuItemsEnum.FENATURE,
+    //SubMenuItemsEnum.CHAMROSH,
+    SubMenuItemsEnum.EMOJI_DATA_VISUALIZER,
+    SubMenuItemsEnum.TWITTER_BOT,
+    SubMenuItemsEnum.TINYICON,
+    SubMenuItemsEnum.TWIN_PRIME,
+    SubMenuItemsEnum.WUSTL,
+    SubMenuItemsEnum.DHCP_LEASE_MANAGEMENT,
+    SubMenuItemsEnum.ACCESS_POINT_MONITORING
+  ],
+  imageProcessing: [
+    SubMenuItemsEnum.EMOJI_DATA_VISUALIZER,
+    SubMenuItemsEnum.TINYICON,
+    SubMenuItemsEnum.TWITTER_BOT,
+    SubMenuItemsEnum.PHOTO_MOSAIC_VIDEOS,
+    SubMenuItemsEnum.THREE_D_SCRIPTING
+  ],
+  personalProjects: [
+    SubMenuItemsEnum.EMOJI_DATA_VISUALIZER,
+    SubMenuItemsEnum.TINYICON,
+    SubMenuItemsEnum.TWITTER_BOT,
+    SubMenuItemsEnum.PHOTO_MOSAIC_VIDEOS,
+    SubMenuItemsEnum.THREE_D_SCRIPTING
+  ]
 }
 
 /**
