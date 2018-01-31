@@ -64,10 +64,23 @@ export class AppComponent implements OnInit {
     this.SubMenuItemsEnum = SubMenuItemsEnum;
   }
 
+  private colors: any = {
+    color1: '#c8472c',
+    color2: '#412a1e',
+    color3: '#f8de3c',
+    color4: '#fefefe',
+    color5: '#48acf4',
+    color6: '#105edd',
+    color7: '#0b3075'
+  }
+
   public getSubMenuItemStyle(subMenuItemName: string, currentSubMenu: any): any {
     let style: any = {};
     if (currentSubMenu === 'professional') {
-      style = this.buildSubMenuItemStyle(currentSubMenu, subMenuItemName, 'down', ['2/3', '5/8'], '#fefefe', '#c8472c', '#f8de3c');
+      style = this.buildSubMenuItemStyle(currentSubMenu, subMenuItemName, 'down', ['2/3', '5/8'], this.colors.color4, this.colors.color1, this.colors.color3);
+    }
+    if (currentSubMenu === 'frontEnd') {
+      style = this.buildSubMenuItemStyle(currentSubMenu, subMenuItemName, 'down', ['3/4', '3/6'], this.colors.color3, this.colors.color7, this.colors.color5);
     }
     return style;
   }

@@ -307,6 +307,10 @@ strong {
   @include semiLateAnimation;
 }
 
+.front-end-square:hover {
+  background-color: $color5;
+}
+
 .back-end-square {
   background-color: $color2;
   color: $color1;
