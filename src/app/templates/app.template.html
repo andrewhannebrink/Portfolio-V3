@@ -13,13 +13,13 @@
       </p>
     </div>
     <div class="main-menu">
-      <div class="square size3 professional-square" (click)="showSubMenu('professional')" *ngIf="!hiddenMainMenuItems['professional']">
+      <div class="square size3 professional-square" (click)="showSubMenu('professional')" *ngIf="!hiddenMainMenuItems.professional">
         Professional
       </div>
       <div class="square size3 consulting-square" *ngIf="!hiddenMainMenuItems.consulting">
         Consulting 
       </div>
-      <div class="square size3 front-end-square" *ngIf="!hiddenMainMenuItems.frontEnd">
+      <div class="square size3 front-end-square" (click)="showSubMenu('frontEnd')" *ngIf="!hiddenMainMenuItems.frontEnd">
         Front-End 
       </div>
       <div class="square size3 back-end-square" *ngIf="!hiddenMainMenuItems.backEnd">

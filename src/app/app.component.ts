@@ -56,14 +56,21 @@ export class AppComponent implements OnInit {
 
   public getSubMenuItemStyle(subMenuItemName: string, currentSubMenu: any): any {
     let style: any = {};
-    let gridPosition: string[];
     if (currentSubMenu === 'professional') {
-      gridPosition = this.getSubMenuGridPosition('professional', subMenuItemName, 'down', ['2/3', '5/8']);
-      style['grid-row'] = gridPosition[0];
-      style['grid-column'] = gridPosition[1];
-      style['color'] = '#fefefe';
-      style['background-color'] = this.hover===true ? '#f8de3c' : '#c8472c';
+      style = this.buildSubMenuItemStyle(currentSubMenu, subMenuItemName, 'down', ['2/3', '5/8'], '#fefefe', '#c8472c', '#f8de3c');
     }
+    return style;
+  }
+
+  public buildSubMenuItemStyle(currentSubMenu: string, subMenuItemName: string, 
+      direction: string, startingGridPosition: string[], textColor: string, bgColor: string, bgColorHover: string): any { 
+    let gridPosition: string[];
+    let style: any = {};
+    gridPosition = this.getSubMenuGridPosition(currentSubMenu, subMenuItemName, direction, startingGridPosition);
+    style['grid-row'] = gridPosition[0];
+    style['grid-column'] = gridPosition[1];
+    style['color'] = textColor;
+    style['background-color'] = this.hover===true ? bgColorHover : bgColor;
     return style;
   }
 
@@ -96,7 +103,6 @@ export class AppComponent implements OnInit {
           this.hiddenMainMenuItems[p] = false;
         }
       }
-      console.log(this.hiddenSubMenus);
     }
   }
 
