@@ -338,6 +338,10 @@ strong {
   @include semiLateAnimation;
 }
 
+.personal-projects-square:hover {
+  background-color: $color5;
+}
+
 .filler-square-1 {
   background-color: $color1;
   grid-column: 7 / 8;
@@ -376,6 +380,10 @@ strong {
   grid-row: 8 / 9;
   animation: 1s ease-in 0s 1 slideInFromBottom;
   @include semiLateAnimation;
+}
+
+.filler-square-5:hover {
+  background-color: $color5
 }
 
 .filler-square-6 {
