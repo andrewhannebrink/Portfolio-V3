@@ -9,7 +9,6 @@ export class SubMenuItemComponent implements OnInit {
 
   constructor() { }
 
-  @Input() hiddenSubMenus: any;
   @Input() subMenuItemName: string;
 
   ngOnInit() {

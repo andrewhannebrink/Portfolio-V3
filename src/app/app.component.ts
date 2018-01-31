@@ -48,6 +48,9 @@ export class AppComponent implements OnInit {
     personalProjects: true
   }
 
+  public currentSubMenu: string = null;
+  public currentSubMenuList: string = null;
+
   public hideAllBut(menuItem: string): void {
     let p;
     for (p in this.hiddenMainMenuItems) {
@@ -80,6 +83,7 @@ export class AppComponent implements OnInit {
   }
 
   public showSubMenu(menuItem: string): void {
+    this.currentSubMenu = menuItem;
     this.hideAllBut(menuItem);
     const gridPositions = this.getSubMenuGridPositions(menuItem, 'down');
   }
@@ -97,9 +101,20 @@ export class AppComponent implements OnInit {
     }
     for (i = 0; i < n; i += 1) {
       nextRowsOrCols = startingRowsOrCols.map(x => (x + i).toString()).join('/');
-      console.log(nextRowsOrCols);
     }
     return ['',''];
+  }
+
+  public checkToShowSubMenuItem(subMenuItem: string): boolean {
+    console.log(this.currentSubMenu);
+    console.log(subMenuItem);
+    if (MenuRelations.hasOwnProperty(this.currentSubMenu) && MenuRelations[this.currentSubMenu].includes(subMenuItem)) {
+      console.log('t');
+      return true;
+    } else {
+      console.log('f');
+      return false;
+    }
   }
 
   public showMainMenu(): void {

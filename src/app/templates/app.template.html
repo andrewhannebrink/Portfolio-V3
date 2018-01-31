@@ -50,9 +50,15 @@
       <div class="square filler-square-6" *ngIf="!hiddenMainMenuItems.filler"></div>
 
       <app-sub-menu-item 
-      [hiddenSubMenus] = "hiddenSubMenus"
-      [subMenuItemName] = "emoji-data-visualizer">
+      [subMenuItemName] = "'emoji-data-visualizer'"
+      *ngIf = "checkToShowSubMenuItem('emoji-data-visualizer')">
       </app-sub-menu-item>
+
+      <app-sub-menu-item 
+      [subMenuItemName] = "'photo-mosaic-videos'"
+      *ngIf = "checkToShowSubMenuItem('photo-mosaic-videos')">
+      </app-sub-menu-item>
+      
       <!--Project Squares-->
       <div *ngIf="false" class="square size3 resume-square">
         Resume
