@@ -13,22 +13,34 @@
       </p>
     </div>
     <div class="main-menu">
-      <div class="square size3 professional-square" (click)="showSubMenu('professional')" *ngIf="!hiddenMainMenuItems.professional">
+      <div class="square size3 professional-square" 
+      (click)="showSubMenu('professional')" 
+      *ngIf="!hiddenMainMenuItems.professional">
         Professional
       </div>
-      <div class="square size3 consulting-square" *ngIf="!hiddenMainMenuItems.consulting">
+      <div class="square size3 consulting-square" 
+      (click)="showSubMenu('consulting')" 
+      *ngIf="!hiddenMainMenuItems.consulting">
         Consulting 
       </div>
-      <div class="square size3 front-end-square" (click)="showSubMenu('frontEnd')" *ngIf="!hiddenMainMenuItems.frontEnd">
+      <div class="square size3 front-end-square" 
+      (click)="showSubMenu('frontEnd')" 
+      *ngIf="!hiddenMainMenuItems.frontEnd">
         Front-End 
       </div>
-      <div class="square size3 back-end-square" *ngIf="!hiddenMainMenuItems.backEnd">
+      <div class="square size3 back-end-square" 
+      (click)="showSubMenu('backEnd')" 
+      *ngIf="!hiddenMainMenuItems.backEnd">
         Back-End 
       </div>
-      <div class="square size2 image-processing-square" *ngIf="!hiddenMainMenuItems.imageProcessing">
+      <div class="square size2 image-processing-square" 
+      (click)="showSubMenu('imageProcessing')" 
+      *ngIf="!hiddenMainMenuItems.imageProcessing">
         Image Processing 
       </div>
-      <div class="square size3 personal-projects-square" *ngIf="!hiddenMainMenuItems.personalProjects">
+      <div class="square size3 personal-projects-square" 
+      (click)="showSubMenu('personalProjects')" 
+      *ngIf="!hiddenMainMenuItems.personalProjects">
         Personal Projects 
       </div>
       <!--TINY SQUARES ONLY AFTER HERE -->
@@ -60,58 +72,6 @@
         </app-sub-menu-item>
       </ng-container>
 
-      <!--Project Squares-->
-      <div *ngIf="false" class="square size3 resume-square">
-        Resume
-      </div>
-      <div *ngIf="false" class="square size3 emoji-data-visualizer-square" routerLink='emoji-data-visualizer'>
-        <div class="square-year">
-          '16
-        </div>
-        Emoji Data Visualizer
-      </div>
-      <div *ngIf="false" class="square square-with-year size2 tinyicon-square" routerLink="tinyicon">
-        <div class="square-year">
-          '15
-        </div>
-        Tinyicon
-      </div>
-      <div *ngIf="false" class="square size2 twitter-bot-square" routerLink="twitter-bot">
-        <div class="square-year">
-          '15-'18
-        </div>
-        Twitter Bot
-      </div>
-      <div *ngIf="false" class="square size2 photo-mosaic-video-square" routerLink="photo-mosaic-videos">
-        <div class="square-year">
-          '14
-        </div>
-        Photo-Mosaic Videos
-      </div>
-      <div *ngIf="false" class="square size2 dhcp-lease-mgmt-square" routerLink="dhcp-lease-management">
-        <div class="square-year">
-          '14
-        </div>
-        DHCP Lease MGMT
-      </div>
-      <div *ngIf="false" class="square size2 face-recognition-square" routerLink="face-detection">
-        <div class="square-year">
-          '13
-        </div>
-        Face Detection
-      </div>
-      <div *ngIf="false" class="square size2 access-point-monitoring-square" routerLink="access-point-monitoring">
-        <div class="square-year">
-          '14
-        </div>
-        Access Point Monitor
-      </div>
-      <div *ngIf="false" class="square size2 three-d-scripting-square" routerLink="3d-scripting">
-        <div class="square-year">
-          '15
-        </div>
-        3D Scripting
-      </div>
     </div>
   </div>
   <div class="content">
