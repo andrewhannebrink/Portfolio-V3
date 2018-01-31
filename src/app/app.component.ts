@@ -8,6 +8,26 @@ import {
 } from '@angular/core';
 import { AppState } from './app.service';
 import { PostsService } from './posts/posts.service';
+
+export const SubMenuItemsEnum = {
+  CHAMROSH : 'chamrosh',
+  FENATURE : 'fenature',
+  PARTY_STORE: 'party-store',
+  EMOJI_DATA_VISUALIZER : 'emoji-data-visualizer',
+  TINYICON : 'tinyicon',
+  THREE_D_SCRIPTING : '3d-scripting',
+  TWITTER_BOT : 'twitter-bot',
+  PHOTO_MOSAIC_VIDEOS : 'photo-mosaic-videos',
+  DHCP_LEASE_MANAGEMENT : 'dhcp-lease-management',
+  ACCESS_POINT_MONITORING : 'access-point-monitoring',
+  FACE_DETECTION : 'face-detection',
+  ZOOSK : 'zoosk',
+  WICKR : 'wickr',
+  TWIN_PRIME : 'twin-prime',
+  WUSTL: 'wustl',
+  SERVICES: 'services'
+};
+
 /**
  * App Component
  * Top Level Component
@@ -24,9 +44,28 @@ import { PostsService } from './posts/posts.service';
 })
 export class AppComponent implements OnInit {
 
-  constructor(
-    public appState: AppState
-  ) { }
+  public currentSubMenu: string = null;
+  public currentSubMenuList: string = null;
+  public SubMenuItemsEnum: any;
+  public values = Object.values;
+  public hover: boolean;
+
+  constructor(public appState: AppState) { 
+    this.SubMenuItemsEnum = SubMenuItemsEnum;
+  }
+
+  public getSubMenuItemStyle(subMenuItemName: string, currentSubMenu: any): any {
+    let style: any = {};
+    let gridPosition: string[];
+    if (currentSubMenu === 'professional') {
+      gridPosition = this.getSubMenuGridPosition('professional', subMenuItemName, 'down', ['2/3', '5/8']);
+      style['grid-row'] = gridPosition[0];
+      style['grid-column'] = gridPosition[1];
+      style['color'] = '#fefefe';
+      style['background-color'] = this.hover===true ? '#f8de3c' : '#c8472c';
+    }
+    return style;
+  }
 
   public hiddenMainMenuItems = {
     professional: false,
@@ -47,9 +86,6 @@ export class AppComponent implements OnInit {
     personalProjects: true
   }
 
-  public currentSubMenu: string = null;
-  public currentSubMenuList: string = null;
-
   public hideAllBut(menuItem: string): void {
     let p;
     for (p in this.hiddenMainMenuItems) {
@@ -60,6 +96,7 @@ export class AppComponent implements OnInit {
           this.hiddenMainMenuItems[p] = false;
         }
       }
+      console.log(this.hiddenSubMenus);
     }
   }
 
@@ -73,8 +110,7 @@ export class AppComponent implements OnInit {
   }
 
   public hideAllSubMenus(): void {
-    let p;
-    for (p in this.hiddenSubMenus) {
+    for (let p in this.hiddenSubMenus) {
       if (this.hiddenSubMenus.hasOwnProperty(p)) {
         this.hiddenSubMenus[p] = true;
       }
@@ -84,13 +120,16 @@ export class AppComponent implements OnInit {
   public showSubMenu(menuItem: string): void {
     this.currentSubMenu = menuItem;
     this.hideAllBut(menuItem);
-    const gridPositions = this.getSubMenuGridPositions(menuItem, 'down');
+    console.log(this.hiddenSubMenus);
+    for (let subMenu of Object.keys(this.hiddenSubMenus)) {
+      for (let subMenuItem of this.hiddenSubMenus[subMenu]) {
+        this.checkToShowSubMenuItem(subMenuItem);
+      }
+    }
   }
 
-  public getSubMenuGridPositions(menuItem: string, direction: string): string[] {
-    const n = MenuRelations[menuItem].length;
-    const startingPos = ['2/3', '5/8']
-    let i, indexToIncrement, startingRowsOrCols, nextPos, nextRowsOrCols;
+  public getSubMenuGridPosition(mainMenuItem: string, subMenuItem: string, direction: string, startingPos: string[]): string[] {
+    let indexToIncrement, startingRowsOrCols, nextPos: string[], nextRowsOrCols;
     if (direction === 'down') {
       indexToIncrement = 0;
       startingRowsOrCols = startingPos[indexToIncrement].split('/').map(x => parseInt(x));
@@ -98,20 +137,21 @@ export class AppComponent implements OnInit {
       indexToIncrement = 1;
       startingRowsOrCols = startingPos[indexToIncrement].split('/').map(x => parseInt(x));
     }
-    for (i = 0; i < n; i += 1) {
-      nextRowsOrCols = startingRowsOrCols.map(x => (x + i).toString()).join('/');
-    }
-    return ['',''];
+    let i = MenuRelations[mainMenuItem].indexOf(subMenuItem)
+    nextRowsOrCols = startingRowsOrCols.map(x => (x + i).toString()).join('/');
+    nextPos = startingPos;
+    nextPos[indexToIncrement] = nextRowsOrCols;
+    return nextPos;
   }
 
-  public checkToShowSubMenuItem(subMenuItem: string): boolean {
-    console.log(this.currentSubMenu);
-    console.log(subMenuItem);
-    if (MenuRelations.hasOwnProperty(this.currentSubMenu) && MenuRelations[this.currentSubMenu].includes(subMenuItem)) {
-      console.log('t');
+  public checkToShowSubMenuItem(subMenuItem: string) {
+    if (this.currentSubMenu === null) {
+      return;
+    } else if (this.currentSubMenu && 
+        MenuRelations.hasOwnProperty(this.currentSubMenu) && 
+        MenuRelations[this.currentSubMenu].includes(subMenuItem)) {
       return true;
     } else {
-      console.log('f');
       return false;
     }
   }
@@ -125,26 +165,8 @@ export class AppComponent implements OnInit {
     console.log('Initial App State', this.appState.state);
   }
 
-}
 
-export const SubMenuItemsEnum = {
-  CHAMROSH : 'chamrosh',
-  FENATURE : 'fenature',
-  PARTY_STORE: 'party-store',
-  EMOJI_DATA_VISUALIZER : 'emoji-data-visualizer',
-  TINYICON : 'tinyicon',
-  THREE_D_SCRIPTING : '3d-scripting',
-  TWITTER_BOT : 'twitter-bot',
-  PHOTO_MOSAIC_VIDEOS : 'photo-mosaic-videos',
-  DHCP_LEASE_MANAGEMENT : 'dhcp-lease-management',
-  ACCESS_POINT_MONITORING : 'access-point-monitoring',
-  FACE_DETECTION : 'face-detection',
-  ZOOSK : 'zoosk',
-  WICKR : 'wickr',
-  TWIN_PRIME : 'twin-prime',
-  WUSTL: 'wustl',
-  SERVICES: 'services',
-};
+}
 
 export const MenuRelations = {
   professional: [
