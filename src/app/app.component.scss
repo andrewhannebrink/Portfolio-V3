@@ -569,7 +569,18 @@ strong {
 
 .size1 {
   background-size: cover;
-  padding: 5px;
+  //padding: 5px;
+  /* Smartphones (landscape) ----------- */
+  @media only screen and (min-width : 321px) {
+    font-size: 3.0vw;
+  }
+  @media (orientation: portrait) {
+    font-size: 3.0vw;
+  }
+  /* iPads (landscape) ----------- */
+  @media only screen and (min-device-width : 768px) and (orientation : landscape) {
+    font-size: 1.6vh;
+  }
 }
 
 .size2 {

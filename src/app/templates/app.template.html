@@ -55,10 +55,14 @@
       </app-sub-menu-item>
 
       <app-sub-menu-item 
+      (mouseover)="hover=true" (mouseleave)="hover=false"
+      class="square square-with-year size1"
       [subMenuItemName] = "'photo-mosaic-videos'"
-      *ngIf = "checkToShowSubMenuItem('photo-mosaic-videos')">
+      *ngIf = "checkToShowSubMenuItem('photo-mosaic-videos')"
+      [ngStyle]="{'grid-row': '3 / 4', 'grid-column': '5 / 8', 'background-color': hover===true ? '#f8de3c' : '#c8472c', 'color': '#fefefe'}"
+      routerLink="photo-mosaic-videos">
       </app-sub-menu-item>
-      
+
       <!--Project Squares-->
       <div *ngIf="false" class="square size3 resume-square">
         Resume

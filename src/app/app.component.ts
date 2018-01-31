@@ -28,7 +28,6 @@ export class AppComponent implements OnInit {
     public appState: AppState
   ) { }
 
-
   public hiddenMainMenuItems = {
     professional: false,
     consulting: false,
