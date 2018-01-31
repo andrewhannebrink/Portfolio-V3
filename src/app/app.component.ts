@@ -81,12 +81,24 @@ export class AppComponent implements OnInit {
 
   public showSubMenu(menuItem: string): void {
     this.hideAllBut(menuItem);
-    const gridPositions = this.getSubMenuGridPositions(menuItem);
+    const gridPositions = this.getSubMenuGridPositions(menuItem, 'down');
   }
 
-  public getSubMenuGridPositions(menuItem: string): string[] {
+  public getSubMenuGridPositions(menuItem: string, direction: string): string[] {
     const n = MenuRelations[menuItem].length;
-    
+    const startingPos = ['2/3', '5/8']
+    let i, indexToIncrement, startingRowsOrCols, nextPos, nextRowsOrCols;
+    if (direction === 'down') {
+      indexToIncrement = 0;
+      startingRowsOrCols = startingPos[indexToIncrement].split('/').map(x => parseInt(x));
+    } else {
+      indexToIncrement = 1;
+      startingRowsOrCols = startingPos[indexToIncrement].split('/').map(x => parseInt(x));
+    }
+    for (i = 0; i < n; i += 1) {
+      nextRowsOrCols = startingRowsOrCols.map(x => (x + i).toString()).join('/');
+      console.log(nextRowsOrCols);
+    }
     return ['',''];
   }
 

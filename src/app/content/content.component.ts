@@ -44,10 +44,13 @@ export class ContentComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // get hero when `id` param changes
-    this.route.params.pluck<string>('urlName')
-      .forEach(urlName => this.getContent(urlName))
-      .catch(() => this.currentContent = POSSIBLE_CONTENT[0]);
+    this.route.params.subscribe(params => {
+      try {
+        this.getContent(params['urlName'])
+      } catch (e){
+        this.currentContent = POSSIBLE_CONTENT[0];
+      }
+    })
   }
  
   private getContent(urlName: string): void {
