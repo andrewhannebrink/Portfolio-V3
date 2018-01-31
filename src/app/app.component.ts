@@ -48,7 +48,17 @@ export class AppComponent implements OnInit {
   public currentSubMenuList: string = null;
   public SubMenuItemsEnum: any;
   public values = Object.values;
-  public hover: boolean;
+  public hoveredSubMenuItem: string = null; 
+
+  public hiddenMainMenuItems = {
+    professional: false,
+    consulting: false,
+    frontEnd: false,
+    backEnd: false,
+    imageProcessing: false,
+    personalProjects: false,
+    filler: false
+  }
 
   constructor(public appState: AppState) { 
     this.SubMenuItemsEnum = SubMenuItemsEnum;
@@ -70,18 +80,8 @@ export class AppComponent implements OnInit {
     style['grid-row'] = gridPosition[0];
     style['grid-column'] = gridPosition[1];
     style['color'] = textColor;
-    style['background-color'] = this.hover===true ? bgColorHover : bgColor;
+    style['background-color'] = this.hoveredSubMenuItem === subMenuItemName ? bgColorHover : bgColor;
     return style;
-  }
-
-  public hiddenMainMenuItems = {
-    professional: false,
-    consulting: false,
-    frontEnd: false,
-    backEnd: false,
-    imageProcessing: false,
-    personalProjects: false,
-    filler: false
   }
 
   public hideAllBut(menuItem: string): void {
