@@ -56,7 +56,7 @@
         [subMenuItemName] = "subMenuItemName"
         *ngIf = "checkToShowSubMenuItem(subMenuItemName)"
         [ngStyle]="getSubMenuItemStyle(subMenuItemName, currentSubMenu)"
-        routerLink="photo-mosaic-videos">
+        routerLink="{{ subMenuItemName }}">
         </app-sub-menu-item>
       </ng-container>
 

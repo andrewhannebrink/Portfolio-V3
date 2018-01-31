@@ -84,15 +84,6 @@ export class AppComponent implements OnInit {
     filler: false
   }
 
-  public hiddenSubMenus = {
-    professional: true,
-    consulting: true,
-    frontEnd: true,
-    backEnd: true,
-    imageProcessing: true,
-    personalProjects: true
-  }
-
   public hideAllBut(menuItem: string): void {
     let p;
     for (p in this.hiddenMainMenuItems) {
@@ -115,25 +106,12 @@ export class AppComponent implements OnInit {
     }
   }
 
-  public hideAllSubMenus(): void {
-    for (let p in this.hiddenSubMenus) {
-      if (this.hiddenSubMenus.hasOwnProperty(p)) {
-        this.hiddenSubMenus[p] = true;
-      }
-    }
-  }
-
   public showSubMenu(menuItem: string): void {
     this.currentSubMenu = menuItem;
     this.hideAllBut(menuItem);
-    console.log(this.hiddenSubMenus);
-    for (let subMenu of Object.keys(this.hiddenSubMenus)) {
-      for (let subMenuItem of this.hiddenSubMenus[subMenu]) {
-        this.checkToShowSubMenuItem(subMenuItem);
-      }
-    }
   }
 
+  // Returns arrays for grid-rows and grid-columns css properties like so: [ '1/2', '3/5' ]
   public getSubMenuGridPosition(mainMenuItem: string, subMenuItem: string, direction: string, startingPos: string[]): string[] {
     let indexToIncrement, startingRowsOrCols, nextPos: string[], nextRowsOrCols;
     if (direction === 'down') {
@@ -164,13 +142,7 @@ export class AppComponent implements OnInit {
 
   public showMainMenu(): void {
     this.currentSubMenu = null;
-    this.hideAllSubMenus();
     this.showAllMainMenuItems();
-    for (let subMenu of Object.keys(this.hiddenSubMenus)) {
-      for (let subMenuItem of this.hiddenSubMenus[subMenu]) {
-        this.checkToShowSubMenuItem(subMenuItem);
-      }
-    }
   }
 
   public ngOnInit() {
