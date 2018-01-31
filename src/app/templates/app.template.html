@@ -61,7 +61,8 @@
       <div class="square filler-square-5" *ngIf="!hiddenMainMenuItems.filler"></div>
       <div class="square filler-square-6" *ngIf="!hiddenMainMenuItems.filler"></div>
 
-      <ng-container *ngFor="let subMenuItemName of values(SubMenuItemsEnum)">
+      <!-- Make an initially hidden app-sub-menu-item component for each value in SumMenuItemsEnum -->
+      <ng-container *ngFor="let subMenuItemName of possibleSubMenuItemNames">
         <app-sub-menu-item 
         class="square square-with-year size1"
         (mouseover)="hoveredSubMenuItem=subMenuItemName" (mouseleave)="hoveredSubMenuItem=null"

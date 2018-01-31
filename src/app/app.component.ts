@@ -47,7 +47,6 @@ export class AppComponent implements OnInit {
   public currentSubMenu: string = null;
   public currentSubMenuList: string = null;
   public SubMenuItemsEnum: any;
-  public values = Object.values;
   public hoveredSubMenuItem: string = null; 
 
   public hiddenMainMenuItems = {
@@ -59,6 +58,8 @@ export class AppComponent implements OnInit {
     personalProjects: false,
     filler: false
   }
+
+  public possibleSubMenuItemNames = Object.keys(SubMenuItemsEnum).map(k => SubMenuItemsEnum[k]);
 
   constructor(public appState: AppState) { 
     this.SubMenuItemsEnum = SubMenuItemsEnum;
@@ -79,8 +80,20 @@ export class AppComponent implements OnInit {
     if (currentSubMenu === 'professional') {
       style = this.buildSubMenuItemStyle(currentSubMenu, subMenuItemName, 'down', ['2/3', '5/8'], this.colors.color4, this.colors.color1, this.colors.color3);
     }
+    if (currentSubMenu === 'consulting') {
+      style = this.buildSubMenuItemStyle(currentSubMenu, subMenuItemName, 'down', ['5/7', '6/8'], this.colors.color2, this.colors.color3, this.colors.color5);
+    }
     if (currentSubMenu === 'frontEnd') {
-      style = this.buildSubMenuItemStyle(currentSubMenu, subMenuItemName, 'down', ['3/4', '3/6'], this.colors.color3, this.colors.color7, this.colors.color5);
+      style = this.buildSubMenuItemStyle(currentSubMenu, subMenuItemName, 'down', ['3/4', '3/6'], this.colors.color4, this.colors.color7, this.colors.color5);
+    }
+    if (currentSubMenu === 'backEnd') {
+      style = this.buildSubMenuItemStyle(currentSubMenu, subMenuItemName, 'down', ['3/3', '5/8'], this.colors.color3, this.colors.color2, this.colors.color5);
+    }
+    if (currentSubMenu === 'imageProcessing') {
+      style = this.buildSubMenuItemStyle(currentSubMenu, subMenuItemName, 'down', ['4/5', '2/5'], this.colors.color2, this.colors.color5, this.colors.color3);
+    }
+    if (currentSubMenu === 'personalProjects') {
+      style = this.buildSubMenuItemStyle(currentSubMenu, subMenuItemName, 'down', ['4/5', '4/7'], this.colors.color1, this.colors.color3, this.colors.color5);
     }
     return style;
   }
