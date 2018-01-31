@@ -157,8 +157,14 @@ export class AppComponent implements OnInit {
   }
 
   public showMainMenu(): void {
+    this.currentSubMenu = null;
     this.hideAllSubMenus();
     this.showAllMainMenuItems();
+    for (let subMenu of Object.keys(this.hiddenSubMenus)) {
+      for (let subMenuItem of this.hiddenSubMenus[subMenu]) {
+        this.checkToShowSubMenuItem(subMenuItem);
+      }
+    }
   }
 
   public ngOnInit() {
