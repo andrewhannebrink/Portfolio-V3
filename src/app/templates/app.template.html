@@ -71,7 +71,7 @@
       <ng-container *ngFor="let subMenuItemName of possibleSubMenuItemNames">
         <app-sub-menu-item 
         class="square square-with-year size1"
-        *ngIf = "checkToShowSubMenuItem(subMenuItemName) && subMenuItemName"
+        *ngIf = "checkToShowSubMenuItem(subMenuItemName)"
         [subMenuItemName] = "subMenuItemName"
         (mouseover)="hoveredSubMenuItem=subMenuItemName" (mouseleave)="hoveredSubMenuItem=null"
         [ngStyle]="getSubMenuItemStyle(subMenuItemName, currentSubMenu)"
