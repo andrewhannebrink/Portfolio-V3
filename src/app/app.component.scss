@@ -37,12 +37,6 @@ header{
 }
 }
 
-@mixin earlyAnimation {
-  opacity: 0;
-  animation-delay: 0s;
-  animation-fill-mode: forwards;
-}
-
 @mixin semiLateAnimation {
   opacity: 0;
   animation-delay: 0.8s;

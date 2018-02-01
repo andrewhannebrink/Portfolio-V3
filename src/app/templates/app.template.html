@@ -15,32 +15,38 @@
     <div class="main-menu">
       <div class="square size3 professional-square" 
       (click)="showSubMenu('professional')" 
-      *ngIf="!hiddenMainMenuItems.professional">
+      *ngIf="!hiddenMainMenuItems.professional"
+      [ngStyle]="{ 'animation-delay': exitedInitialMainMenu ? '0.0s' : null}" >
         Professional
       </div>
       <div class="square size3 consulting-square" 
       (click)="showSubMenu('consulting')" 
-      *ngIf="!hiddenMainMenuItems.consulting">
+      *ngIf="!hiddenMainMenuItems.consulting"
+      [ngStyle]="{ 'animation-delay': exitedInitialMainMenu ? '0.0s' : null}" >
         Consulting 
       </div>
       <div class="square size3 front-end-square" 
       (click)="showSubMenu('frontEnd')" 
-      *ngIf="!hiddenMainMenuItems.frontEnd">
+      *ngIf="!hiddenMainMenuItems.frontEnd"
+      [ngStyle]="{ 'animation-delay': exitedInitialMainMenu ? '0.0s' : null}" >
         Front-End 
       </div>
       <div class="square size3 back-end-square" 
       (click)="showSubMenu('backEnd')" 
-      *ngIf="!hiddenMainMenuItems.backEnd">
+      *ngIf="!hiddenMainMenuItems.backEnd"
+      [ngStyle]="{ 'animation-delay': exitedInitialMainMenu ? '0.0s' : null}" >
         Back-End 
       </div>
       <div class="square size2 image-processing-square" 
       (click)="showSubMenu('imageProcessing')" 
-      *ngIf="!hiddenMainMenuItems.imageProcessing">
+      *ngIf="!hiddenMainMenuItems.imageProcessing"
+      [ngStyle]="{ 'animation-delay': exitedInitialMainMenu ? '0.0s' : null}" >
         Image Processing 
       </div>
       <div class="square size3 personal-projects-square" 
       (click)="showSubMenu('personalProjects')" 
-      *ngIf="!hiddenMainMenuItems.personalProjects">
+      *ngIf="!hiddenMainMenuItems.personalProjects"
+      [ngStyle]="{ 'animation-delay': exitedInitialMainMenu ? '0.0s' : null}" >
         Personal Projects 
       </div>
       <!--TINY SQUARES ONLY AFTER HERE -->
@@ -65,9 +71,9 @@
       <ng-container *ngFor="let subMenuItemName of possibleSubMenuItemNames">
         <app-sub-menu-item 
         class="square square-with-year size1"
-        (mouseover)="hoveredSubMenuItem=subMenuItemName" (mouseleave)="hoveredSubMenuItem=null"
+        *ngIf = "checkToShowSubMenuItem(subMenuItemName) && subMenuItemName"
         [subMenuItemName] = "subMenuItemName"
-        *ngIf = "checkToShowSubMenuItem(subMenuItemName)"
+        (mouseover)="hoveredSubMenuItem=subMenuItemName" (mouseleave)="hoveredSubMenuItem=null"
         [ngStyle]="getSubMenuItemStyle(subMenuItemName, currentSubMenu)"
         routerLink="{{ subMenuItemName }}">
         </app-sub-menu-item>

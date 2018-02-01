@@ -24,7 +24,6 @@ export const SubMenuItemsEnum = {
   ZOOSK : 'zoosk',
   WICKR : 'wickr',
   TWIN_PRIME : 'twin-prime',
-  WUSTL: 'wustl',
   SERVICES: 'services'
 };
 
@@ -48,6 +47,7 @@ export class AppComponent implements OnInit {
   public currentSubMenuList: string = null;
   public SubMenuItemsEnum: any;
   public hoveredSubMenuItem: string = null; 
+  public exitedInitialMainMenu: boolean = false;
 
   public hiddenMainMenuItems = {
     professional: false,
@@ -78,7 +78,7 @@ export class AppComponent implements OnInit {
   public getSubMenuItemStyle(subMenuItemName: string, currentSubMenu: any): any {
     let style: any = {};
     if (currentSubMenu === 'professional') {
-      style = this.buildSubMenuItemStyle(currentSubMenu, subMenuItemName, 'down', ['2/3', '5/8'], this.colors.color4, this.colors.color1, this.colors.color3);
+      style = this.buildSubMenuItemStyle(currentSubMenu, subMenuItemName, 'down', ['3/4', '5/8'], this.colors.color4, this.colors.color1, this.colors.color3);
     }
     if (currentSubMenu === 'consulting') {
       style = this.buildSubMenuItemStyle(currentSubMenu, subMenuItemName, 'down', ['5/7', '6/8'], this.colors.color2, this.colors.color3, this.colors.color5);
@@ -133,6 +133,7 @@ export class AppComponent implements OnInit {
   }
 
   public showSubMenu(menuItem: string): void {
+    this.exitedInitialMainMenu = true;
     this.currentSubMenu = menuItem;
     this.hideAllBut(menuItem);
   }
@@ -186,7 +187,6 @@ export const MenuRelations = {
     SubMenuItemsEnum.WICKR,
     SubMenuItemsEnum.TWIN_PRIME,
     SubMenuItemsEnum.PHOTO_MOSAIC_VIDEOS,
-    SubMenuItemsEnum.WUSTL,
     SubMenuItemsEnum.DHCP_LEASE_MANAGEMENT,
     SubMenuItemsEnum.ACCESS_POINT_MONITORING
   ],
@@ -213,7 +213,6 @@ export const MenuRelations = {
     SubMenuItemsEnum.TWITTER_BOT,
     SubMenuItemsEnum.TINYICON,
     SubMenuItemsEnum.TWIN_PRIME,
-    SubMenuItemsEnum.WUSTL,
     SubMenuItemsEnum.DHCP_LEASE_MANAGEMENT,
     SubMenuItemsEnum.ACCESS_POINT_MONITORING
   ],
