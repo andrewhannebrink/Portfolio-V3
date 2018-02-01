@@ -8,6 +8,7 @@ import {
 } from '@angular/core';
 import { AppState } from './app.service';
 import { PostsService } from './posts/posts.service';
+import { MAIN_MENU_ICON_LINKS } from './constants';
 
 export const SubMenuItemsEnum = {
   CHAMROSH : 'chamrosh',
@@ -48,6 +49,7 @@ export class AppComponent implements OnInit {
   public SubMenuItemsEnum: any;
   public hoveredSubMenuItem: string = null; 
   public exitedInitialMainMenu: boolean = false;
+  public mainMenuIconLinks: any = MAIN_MENU_ICON_LINKS;
 
   public hiddenMainMenuItems = {
     professional: false,
