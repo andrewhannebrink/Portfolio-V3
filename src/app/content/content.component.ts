@@ -20,18 +20,28 @@ export class ContentComponent implements OnInit {
     return styleStr; 
   };
 
-  public getBannerRepeat: Function = function(): string {
-    let styleStr = 'repeat';
-    if (this.currentContent.bannerImgUrl.includes('wustl')) {
+  public getBannerRepeat(): string {
+    let styleStr = 'repeat',
+    bannerImgUrl = this.currentContent.bannerImgUrl;
+
+    if (bannerImgUrl.includes('wustl') ||
+      bannerImgUrl.includes('twin-prime') ||
+      bannerImgUrl.includes('zoosk') || 
+      bannerImgUrl.includes('wickr')) {
+
       styleStr = 'no-repeat';
     }
     return styleStr;
   }
 
-  public getBannerPosition: Function = function(): string {
+  public getBannerPosition(): string {
     let styleStr = 'left top',
         bannerImgUrl = this.currentContent.bannerImgUrl;
-    if (bannerImgUrl.includes('wustl')) {
+    if (bannerImgUrl.includes('wustl') ||
+      bannerImgUrl.includes('twin-prime') ||
+      bannerImgUrl.includes('zoosk') || 
+      bannerImgUrl.includes('wickr')) {
+      
       styleStr = 'center';
     } else if (bannerImgUrl.includes('three-d-scripting') || 
         bannerImgUrl.includes('photo-mosaic-videos')) {

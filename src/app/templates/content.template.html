@@ -8,8 +8,10 @@
     </div>
   </div>
   <div class="content-title-images">
-    <div class="banner" [style.backgroundImage]='getCurrentBannerBackgroundImageCss()' [style.backgroundRepeat]='getBannerRepeat()' [style.backgroundPosition]='getBannerPosition()'>
-    </div>
+    <div class="banner" 
+    [style.backgroundImage]='getCurrentBannerBackgroundImageCss()' 
+    [style.backgroundRepeat]='getBannerRepeat()' 
+    [style.backgroundPosition]='getBannerPosition()'></div>
     <div class="content-link-icon-row"  >
       <ng-container *ngFor="let linkObj of currentContent.links">
         <a class="content-link-icon square size1" 
