@@ -223,7 +223,8 @@ export const MenuRelations = {
     SubMenuItemsEnum.TINYICON,
     SubMenuItemsEnum.TWITTER_BOT,
     SubMenuItemsEnum.PHOTO_MOSAIC_VIDEOS,
-    SubMenuItemsEnum.THREE_D_SCRIPTING
+    SubMenuItemsEnum.THREE_D_SCRIPTING,
+    SubMenuItemsEnum.FACE_DETECTION
   ],
   personalProjects: [
     SubMenuItemsEnum.EMOJI_DATA_VISUALIZER,

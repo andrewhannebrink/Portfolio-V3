@@ -3,6 +3,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { ApolloModule } from 'apollo-angular';
 import { client } from '../graphql.client';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import {
   NgModule,
   ApplicationRef
@@ -90,7 +91,8 @@ type StoreType = {
    */
   providers: [
     ENV_PROVIDERS,
-    APP_PROVIDERS
+    APP_PROVIDERS,
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
   ]
 })
 export class AppModule {
