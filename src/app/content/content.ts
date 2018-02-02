@@ -157,7 +157,7 @@ export const POSSIBLE_CONTENT: Content[] = [
     links: [
       {
         linkType: LINK_TYPES.GIT,
-        url: ''
+        url: 'https://github.com/andrewhannebrink/Facial-Recognition'
       }
     ],
     urlName: SubMenuItemsEnum.FACE_DETECTION,
@@ -166,7 +166,7 @@ export const POSSIBLE_CONTENT: Content[] = [
     year: '2013',
     scope: 'Computer Vision, Matrix Algrebra, Feature Recogntion, Object Oriented Programming',
     technologies: 'C++',
-    description: 'https://github.com/andrewhannebrink/Facial-Recognition'
+    description: ''
   }
 ];
 
