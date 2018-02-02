@@ -7,7 +7,17 @@
       <strong>Technologies</strong><br>{{ currentContent.technologies }}
     </div>
   </div>
-  <div class="banner" [style.backgroundImage]='getCurrentBannerBackgroundImageCss()' [style.backgroundRepeat]='getBannerRepeat()' [style.backgroundPosition]='getBannerPosition()'></div>
+  <div class="content-title-images">
+    <div class="banner" [style.backgroundImage]='getCurrentBannerBackgroundImageCss()' [style.backgroundRepeat]='getBannerRepeat()' [style.backgroundPosition]='getBannerPosition()'>
+    </div>
+    <div class="content-link-icon-row">
+      <div class="content-link-icon">
+      </div>
+      <div class="content-link-icon">
+      </div>
+    </div>
+  </div>
+
 </div>
 <div class="content-write-up-box">
   <p>{{ currentContent.description }}</p>

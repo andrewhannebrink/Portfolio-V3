@@ -573,12 +573,43 @@ strong {
 .content-title-words {
   flex: 1;
 }
+
+.content-title-images {
+  display: flex;
+  flex-direction: column;
+  flex: 3
+}
+
 .banner {
-  flex: 3;
   height: 300px;
   border: 5px solid $color1;
   animation: 1s ease-in 0s 1 slideInFromRight;
   @include lateAnimation;
+}
+
+.content-link-icon-row {
+  display: flex;
+}
+
+//TODO
+.content-link-icon {
+  background-color: $color1;
+  margin: 15px;
+  margin-left: 0px;
+  /* Smartphones (landscape) ----------- */
+  @media only screen and (min-width : 321px) {
+    height: 6vh;
+    width : 6vh;
+  }
+  @media (orientation: portrait) {
+    height: 10vw;
+    width : 10vw;
+  }
+  /* iPads (landscape) ----------- */
+  @media only screen and (min-device-width : 768px) and (orientation : landscape) {
+    height: 6vh;
+    width : 6vh;
+  }
 }
 
 .content-write-up-box {
