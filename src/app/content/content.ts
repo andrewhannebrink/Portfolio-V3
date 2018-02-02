@@ -95,7 +95,7 @@ export const POSSIBLE_CONTENT: Content[] = [
     urlName: SubMenuItemsEnum.TWITTER_BOT,
     displayName: 'Photo-Mosaic\nTwitter\nBot',
     bannerImgUrl: '../assets/img/tiny_peon.png',
-    year: '2015-Present',
+    year: '2015 - Present',
     scope: 'Image Processing, Viral Marketing, Back-End Web Development, Twitter API, Server-Side Automation',
     technologies: 'JavaScript, Node, Python, PIL, AWS, EC2, Crontab',
     description: ''
@@ -166,6 +166,50 @@ export const POSSIBLE_CONTENT: Content[] = [
     year: '2013',
     scope: 'Computer Vision, Matrix Algrebra, Feature Recogntion, Object Oriented Programming',
     technologies: 'C++',
+    description: ''
+  },
+  {
+    id: 9,
+    links: [],
+    urlName: SubMenuItemsEnum.ZOOSK,
+    displayName: 'Zoosk',
+    bannerImgUrl: '../assets/img/zoosk.png',
+    year: '2016 - 2017',
+    scope: '',
+    technologies: '',
+    description: ''
+  },
+  {
+    id: 10,
+    links: [],
+    urlName: SubMenuItemsEnum.WICKR,
+    displayName: 'Wickr',
+    bannerImgUrl: '../assets/img/wickr.png',
+    year: '2016',
+    scope: '',
+    technologies: '',
+    description: ''
+  },
+  {
+    id: 11,
+    links: [],
+    urlName: SubMenuItemsEnum.TWIN_PRIME,
+    displayName: 'Twin\nPrime',
+    bannerImgUrl: '../assets/img/twin-prime.png',
+    year: '2014 - 2015',
+    scope: '',
+    technologies: '',
+    description: ''
+  },
+  {
+    id: 12,
+    links: [],
+    urlName: SubMenuItemsEnum.SERVICES,
+    displayName: 'Web\n&\nConsulting',
+    bannerImgUrl: '../assets/img/services.png',
+    year: null,
+    scope: null, 
+    technologies: null,
     description: ''
   }
 ];
