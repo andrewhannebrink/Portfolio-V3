@@ -36,61 +36,61 @@ let subMenuItemContentMasterObj: any = {};
 
 subMenuItemContentMasterObj[SubMenuItemsEnum.ACCESS_POINT_MONITORING] = {
   displayName: 'Controller Monitoring',
-  yearString: "'14"  
+  yearString: "14"  
 };
 subMenuItemContentMasterObj[SubMenuItemsEnum.CHAMROSH] = {
   displayName: 'Chamrosh',
-  yearString: "'18"  
+  yearString: "18"  
 };
 subMenuItemContentMasterObj[SubMenuItemsEnum.DHCP_LEASE_MANAGEMENT] = {
   displayName: 'DHCP Lease MGMT',
-  yearString: "'14"  
+  yearString: "14"  
 };
 subMenuItemContentMasterObj[SubMenuItemsEnum.EMOJI_DATA_VISUALIZER] = {
   displayName: 'Emoji Data Vizualizer',
-  yearString: "'16"  
+  yearString: "16"  
 };
 subMenuItemContentMasterObj[SubMenuItemsEnum.FACE_DETECTION] = {
   displayName: 'Face Recognition',
-  yearString: "'13"  
+  yearString: "13"  
 };
 subMenuItemContentMasterObj[SubMenuItemsEnum.FENATURE] = {
   displayName: 'Fenature',
-  yearString: "'18"  
+  yearString: "18"  
 };
 subMenuItemContentMasterObj[SubMenuItemsEnum.PARTY_STORE] = {
   displayName: 'Party Store',
-  yearString: "'17"  
+  yearString: "17"  
 };
 subMenuItemContentMasterObj[SubMenuItemsEnum.PHOTO_MOSAIC_VIDEOS] = {
   displayName: 'Photo Mosaic Videos',
-  yearString: "'14"  
+  yearString: "14"  
 };
 subMenuItemContentMasterObj[SubMenuItemsEnum.SERVICES] = {
   displayName: 'Services & Pricing',
-  yearString: "'18"  
+  yearString: ""  
 };
 subMenuItemContentMasterObj[SubMenuItemsEnum.THREE_D_SCRIPTING] = {
   displayName: 'Three-D Scripting',
-  yearString: "'15"  
+  yearString: "15"  
 };
 subMenuItemContentMasterObj[SubMenuItemsEnum.TINYICON] = {
   displayName: 'TinyIcon',
-  yearString: "'15"
+  yearString: "15"
 };
 subMenuItemContentMasterObj[SubMenuItemsEnum.TWIN_PRIME] = {
   displayName: 'Twin Prime',
-  yearString: "'14-'15"  
+  yearString: "14-15"  
 };
 subMenuItemContentMasterObj[SubMenuItemsEnum.TWITTER_BOT] = {
   displayName: 'Twitter Bot',
-  yearString: "'15-'18"  
+  yearString: "15-18"  
 };
 subMenuItemContentMasterObj[SubMenuItemsEnum.WICKR] = {
   displayName: 'Wickr',
-  yearString: "'16"  
+  yearString: "16"  
 };
 subMenuItemContentMasterObj[SubMenuItemsEnum.ZOOSK] = {
   displayName: 'Zoosk',
-  yearString: "'16-'17"  
+  yearString: "16-17"  
 };
