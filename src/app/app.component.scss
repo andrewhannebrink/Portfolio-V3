@@ -12,7 +12,8 @@ $color7: #0b3075;
 // From MEAN.io
 html, body{
   height: 100%;
-  font-family: Arial, Helvetica, sans-serif
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: $color4;
 header{
   background-color: primary
 }
@@ -528,6 +529,10 @@ strong {
   background-color: $color4;
   padding: 20px;
   padding-top: 90px;
+  overflow: scroll;
+  animation: 1s ease-in 0s 1 slideInFromRight;
+  @include lateAnimation
+
   /* Smartphones (landscape) ----------- */
   @media only screen and (min-width : 321px) {
   }
@@ -537,8 +542,6 @@ strong {
   @media only screen and (min-device-width : 768px) and (orientation : landscape) {
     border-left: 15px solid $color1;
   }
-  overflow: scroll;
-  animation: 1s ease-in 0s 1 slideInFromLeft;
 }
 
 .content p {
@@ -552,7 +555,6 @@ strong {
 }
 
 .content-header {
-  @include lateAnimation;
   white-space: pre-wrap;
 }
 
@@ -564,7 +566,6 @@ strong {
 .content-sub-title {
   text-align: right;
   animation: 1s ease-in 0s 1 slideInFromTop;
-  @include lateAnimation;
 }
 
 .content-title-words {
@@ -581,7 +582,6 @@ strong {
   height: 300px;
   border: 5px solid $color1;
   animation: 1s ease-in 0s 1 slideInFromRight;
-  @include lateAnimation;
 }
 
 .content-link-icon-row {
@@ -592,6 +592,7 @@ strong {
   padding: 0px !important;
   margin: 15px;
   margin-left: 0px;
+  animation: 1s ease-in 0s 1 slideInFromRight;
   /* Smartphones (landscape) ----------- */
   @media only screen and (min-width : 321px) {
     height: 10vw;
@@ -630,7 +631,6 @@ strong {
 
 .content-write-up-box {
   animation: 1s ease-in 0s 1 slideInFromBottom;
-  @include lateAnimation;
 }
 
 .size1 {

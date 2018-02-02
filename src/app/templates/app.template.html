@@ -16,37 +16,37 @@
       <div class="square size3 professional-square" 
       (click)="showSubMenu('professional')" 
       *ngIf="!hiddenMainMenuItems.professional"
-      [ngStyle]="{ 'animation-delay': exitedInitialMainMenu ? '0.0s' : null}" >
+      [ngStyle]="noDelayStyle(exitedInitialMainMenu)">
         Professional
       </div>
       <div class="square size3 consulting-square" 
       (click)="showSubMenu('consulting')" 
       *ngIf="!hiddenMainMenuItems.consulting"
-      [ngStyle]="{ 'animation-delay': exitedInitialMainMenu ? '0.0s' : null}" >
+      [ngStyle]="noDelayStyle(exitedInitialMainMenu)" >
         Consulting 
       </div>
       <div class="square size3 front-end-square" 
       (click)="showSubMenu('frontEnd')" 
       *ngIf="!hiddenMainMenuItems.frontEnd"
-      [ngStyle]="{ 'animation-delay': exitedInitialMainMenu ? '0.0s' : null}" >
+      [ngStyle]="noDelayStyle(exitedInitialMainMenu)" >
         Front-End 
       </div>
       <div class="square size3 back-end-square" 
       (click)="showSubMenu('backEnd')" 
       *ngIf="!hiddenMainMenuItems.backEnd"
-      [ngStyle]="{ 'animation-delay': exitedInitialMainMenu ? '0.0s' : null}" >
+      [ngStyle]="noDelayStyle(exitedInitialMainMenu)" >
         Back-End 
       </div>
       <div class="square size2 image-processing-square" 
       (click)="showSubMenu('imageProcessing')" 
       *ngIf="!hiddenMainMenuItems.imageProcessing"
-      [ngStyle]="{ 'animation-delay': exitedInitialMainMenu ? '0.0s' : null}" >
+      [ngStyle]="noDelayStyle(exitedInitialMainMenu)" >
         Image Processing 
       </div>
       <div class="square size3 personal-projects-square" 
       (click)="showSubMenu('personalProjects')" 
       *ngIf="!hiddenMainMenuItems.personalProjects"
-      [ngStyle]="{ 'animation-delay': exitedInitialMainMenu ? '0.0s' : null}" >
+      [ngStyle]="noDelayStyle(exitedInitialMainMenu)" >
         Personal Projects 
       </div>
       <!--TINY SQUARES ONLY AFTER HERE -->

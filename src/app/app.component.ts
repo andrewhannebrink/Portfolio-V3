@@ -77,6 +77,10 @@ export class AppComponent implements OnInit {
     color7: '#0b3075'
   }
 
+  public noDelayStyle(exitedInitialMainMenu: boolean): any {
+    return { 'animation-delay': exitedInitialMainMenu ? '0.0s' : null };
+  }
+
   public getSubMenuItemStyle(subMenuItemName: string, currentSubMenu: any): any {
     let style: any = {};
     if (currentSubMenu === 'professional') {
