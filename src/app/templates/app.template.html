@@ -75,6 +75,7 @@
         [subMenuItemName] = "subMenuItemName"
         (mouseover)="hoveredSubMenuItem=subMenuItemName" (mouseleave)="hoveredSubMenuItem=null"
         [ngStyle]="getSubMenuItemStyle(subMenuItemName, currentSubMenu)"
+        [ngClass]="{ 'size2': subMenuItemName === SubMenuItemsEnum.SERVICES }"
         routerLink="{{ subMenuItemName }}">
         </app-sub-menu-item>
       </ng-container>

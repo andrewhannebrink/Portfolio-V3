@@ -87,7 +87,7 @@ export class AppComponent implements OnInit {
       style = this.buildSubMenuItemStyle(currentSubMenu, subMenuItemName, 'down', ['3/4', '5/8'], this.colors.color4, this.colors.color1, this.colors.color3);
     }
     if (currentSubMenu === 'consulting') {
-      style = this.buildSubMenuItemStyle(currentSubMenu, subMenuItemName, 'down', ['5/7', '6/8'], this.colors.color2, this.colors.color3, this.colors.color5);
+      style = this.buildSubMenuItemStyle(currentSubMenu, subMenuItemName, 'down', ['5/7', '3/5'], this.colors.color2, this.colors.color3, this.colors.color5);
     }
     if (currentSubMenu === 'frontEnd') {
       style = this.buildSubMenuItemStyle(currentSubMenu, subMenuItemName, 'down', ['3/4', '3/6'], this.colors.color4, this.colors.color7, this.colors.color5);
@@ -108,11 +108,13 @@ export class AppComponent implements OnInit {
       direction: string, startingGridPosition: string[], textColor: string, bgColor: string, bgColorHover: string): any { 
     let gridPosition: string[];
     let style: any = {};
+    
     gridPosition = this.getSubMenuGridPosition(currentSubMenu, subMenuItemName, direction, startingGridPosition);
     style['grid-row'] = gridPosition[0];
     style['grid-column'] = gridPosition[1];
     style['color'] = textColor;
     style['background-color'] = this.hoveredSubMenuItem === subMenuItemName ? bgColorHover : bgColor;
+
     return style;
   }
 
