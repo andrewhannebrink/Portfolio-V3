@@ -80,11 +80,11 @@ subMenuItemContentMasterObj[SubMenuItemsEnum.TINYICON] = {
 };
 subMenuItemContentMasterObj[SubMenuItemsEnum.TWIN_PRIME] = {
   displayName: 'Twin Prime',
-  yearString: "14-15"  
+  yearString: "14 - 15"  
 };
 subMenuItemContentMasterObj[SubMenuItemsEnum.TWITTER_BOT] = {
   displayName: 'Twitter Bot',
-  yearString: "15-18"  
+  yearString: "15 - 18"  
 };
 subMenuItemContentMasterObj[SubMenuItemsEnum.WICKR] = {
   displayName: 'Wickr',
@@ -92,5 +92,5 @@ subMenuItemContentMasterObj[SubMenuItemsEnum.WICKR] = {
 };
 subMenuItemContentMasterObj[SubMenuItemsEnum.ZOOSK] = {
   displayName: 'Zoosk',
-  yearString: "16-17"  
+  yearString: "16 - 17"  
 };
