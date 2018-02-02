@@ -43,8 +43,12 @@ export const POSSIBLE_CONTENT: Content[] = [
     id: 2,
     links: [
       {
+        linkType: LINK_TYPES.LIVE,
+        url: 'http://www.tinyicon.co',
+      },
+      {
         linkType: LINK_TYPES.GIT,
-        url: ''
+        url: 'https://github.com/andrewhannebrink/api'
       }
     ],
     urlName: SubMenuItemsEnum.TINYICON,
@@ -59,9 +63,14 @@ export const POSSIBLE_CONTENT: Content[] = [
     id: 3,
     links: [
       {
+        linkType: LINK_TYPES.VIMEO,
+        url: 'https://vimeo.com/131334222'
+      },
+      {
         linkType: LINK_TYPES.GIT,
-        url: ''
+        url: 'https://github.com/andrewhannebrink/blender'
       }
+
     ],
     urlName: SubMenuItemsEnum.THREE_D_SCRIPTING,
     displayName: '3D\nScripting\nWith\nBlender',
@@ -75,8 +84,12 @@ export const POSSIBLE_CONTENT: Content[] = [
     id: 4,
     links: [
       {
+        linkType: LINK_TYPES.TWITTER,
+        url: 'https://twitter.com/tiny_phenom'
+      },
+      {
         linkType: LINK_TYPES.GIT,
-        url: ''
+        url: 'https://github.com/andrewhannebrink/photo-mosaic-video-generator/blob/master/readme.md'
       }
     ],
     urlName: SubMenuItemsEnum.TWITTER_BOT,
@@ -91,9 +104,13 @@ export const POSSIBLE_CONTENT: Content[] = [
     id: 5,
     links: [
       {
-        linkType: LINK_TYPES.GIT,
-        url: ''
+        linkType: LINK_TYPES.VIMEO,
+        url: 'http://www.vimeo.com/tinyicon'
       }
+      {
+        linkType: LINK_TYPES.GIT,
+        url: 'https://github.com/andrewhannebrink/photo-mosaic-video-generator/blob/master/readme.md'
+      },
     ],
     urlName: SubMenuItemsEnum.PHOTO_MOSAIC_VIDEOS,
     displayName: 'Photo-Mosaic\nVideos',
@@ -108,7 +125,7 @@ export const POSSIBLE_CONTENT: Content[] = [
     links: [
       {
         linkType: LINK_TYPES.GIT,
-        url: ''
+        url: 'https://github.com/andrewhannebrink/DHCPACK-Logger-and-Infoblox-Lease-Updater'
       }
     ],
     urlName: SubMenuItemsEnum.DHCP_LEASE_MANAGEMENT,
@@ -124,7 +141,7 @@ export const POSSIBLE_CONTENT: Content[] = [
     links: [
       {
         linkType: LINK_TYPES.GIT,
-        url: ''
+        url: 'https://github.com/andrewhannebrink/Controller-Logging-and-Monitoring'
       }
     ],
     urlName: SubMenuItemsEnum.ACCESS_POINT_MONITORING,
@@ -149,7 +166,7 @@ export const POSSIBLE_CONTENT: Content[] = [
     year: '2013',
     scope: 'Computer Vision, Matrix Algrebra, Feature Recogntion, Object Oriented Programming',
     technologies: 'C++',
-    description: ''
+    description: 'https://github.com/andrewhannebrink/Facial-Recognition'
   }
 ];
 
