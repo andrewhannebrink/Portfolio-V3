@@ -589,15 +589,13 @@ strong {
 }
 
 .content-link-icon {
-  background-color: $color1;
-  background-image: url("../assets/img/link.svg");
   padding: 0px !important;
   margin: 15px;
   margin-left: 0px;
   /* Smartphones (landscape) ----------- */
   @media only screen and (min-width : 321px) {
-    height: 6vh;
-    width : 6vh;
+    height: 10vw;
+    width : 10vw;
   }
   @media (orientation: portrait) {
     height: 10vw;
@@ -608,6 +606,26 @@ strong {
     height: 6vh;
     width : 6vh;
   }
+}
+
+.live-link-icon {
+  background-color: $color1;
+  background-image: url("../assets/img/link.svg");
+}
+
+.github-icon {
+  background-color: $color2;
+  background-image: url("../assets/img/github.svg");
+}
+
+.twitter-icon {
+  background-color: $color5;
+  background-image: url("../assets/img/twitter.svg");
+}
+
+.vimeo-icon {
+  background-color: $color5;
+  background-image: url("../assets/img/vimeo.svg");
 }
 
 .content-write-up-box {

@@ -2,7 +2,7 @@
   <div class="content-title-words">
     <h1 class="content-header">{{ currentContent.displayName }}</h1>
     <div class="content-sub-title tiny">
-        <strong>Year</strong><br>{{ currentContent.year }}<br><br>
+      <strong>Year</strong><br>{{ currentContent.year }}<br><br>
       <strong>Scope</strong><br>{{ currentContent.scope }}<br><br>
       <strong>Technologies</strong><br>{{ currentContent.technologies }}
     </div>
@@ -11,10 +11,12 @@
     <div class="banner" [style.backgroundImage]='getCurrentBannerBackgroundImageCss()' [style.backgroundRepeat]='getBannerRepeat()' [style.backgroundPosition]='getBannerPosition()'>
     </div>
     <div class="content-link-icon-row"  >
-      <div class="content-link-icon square size1">
-      </div>
-      <div class="size1 square content-link-icon">
-      </div>
+      <ng-container *ngFor="let linkObj of currentContent.links">
+        <a class="content-link-icon square size1" 
+        [ngClass]="getIconBackgroundClass(linkObj)" 
+        href="{{ linkObj.url }}"
+        target="_blank"></a>
+      </ng-container>
     </div>
   </div>
 

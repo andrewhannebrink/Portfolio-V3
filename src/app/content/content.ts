@@ -1,8 +1,7 @@
 import { SubMenuItemsEnum } from '../app.component';
 export class Content {
   id: number;
-  liveLink: string;
-  githubLink: string;
+  links: any[];
   urlName: string;
   displayName: string;
   bannerImgUrl: string;
@@ -12,11 +11,26 @@ export class Content {
   description: string;
 };
 
+export const LINK_TYPES = {
+  GIT: 'git',
+  LIVE: 'live',
+  TWITTER: 'twitter',
+  VIMEO: 'vimeo'
+};
+
 export const POSSIBLE_CONTENT: Content[] = [
   {
     id: 1,
-    liveLink: '', 
-    githubLink: '',
+    links: [
+      {
+        linkType: LINK_TYPES.LIVE,
+        url: 'http://www.tinyicon.co/m/info',
+      },
+      {
+        linkType: LINK_TYPES.GIT,
+        url: 'https://github.com/andrewhannebrink/emoji-data-visualizer'
+      }
+    ],
     urlName: SubMenuItemsEnum.EMOJI_DATA_VISUALIZER,
     displayName: 'Emoji\nData\nVisualizer',
     bannerImgUrl: '../assets/img/visualizer.png',
@@ -27,8 +41,12 @@ export const POSSIBLE_CONTENT: Content[] = [
   },
   {
     id: 2,
-    liveLink: '', 
-    githubLink: '',
+    links: [
+      {
+        linkType: LINK_TYPES.GIT,
+        url: ''
+      }
+    ],
     urlName: SubMenuItemsEnum.TINYICON,
     displayName: 'TinyIcon\nMosaic\nSelector',
     bannerImgUrl: '../assets/img/tiny_icon.png',
@@ -39,8 +57,12 @@ export const POSSIBLE_CONTENT: Content[] = [
   },
   {
     id: 3,
-    liveLink: '', 
-    githubLink: '',
+    links: [
+      {
+        linkType: LINK_TYPES.GIT,
+        url: ''
+      }
+    ],
     urlName: SubMenuItemsEnum.THREE_D_SCRIPTING,
     displayName: '3D\nScripting\nWith\nBlender',
     bannerImgUrl: '../assets/img/three-d-scripting.png',
@@ -51,8 +73,12 @@ export const POSSIBLE_CONTENT: Content[] = [
   },
   {
     id: 4,
-    liveLink: '', 
-    githubLink: '',
+    links: [
+      {
+        linkType: LINK_TYPES.GIT,
+        url: ''
+      }
+    ],
     urlName: SubMenuItemsEnum.TWITTER_BOT,
     displayName: 'Photo-Mosaic\nTwitter\nBot',
     bannerImgUrl: '../assets/img/tiny_peon.png',
@@ -63,8 +89,12 @@ export const POSSIBLE_CONTENT: Content[] = [
   },
   {
     id: 5,
-    liveLink: '', 
-    githubLink: '',
+    links: [
+      {
+        linkType: LINK_TYPES.GIT,
+        url: ''
+      }
+    ],
     urlName: SubMenuItemsEnum.PHOTO_MOSAIC_VIDEOS,
     displayName: 'Photo-Mosaic\nVideos',
     bannerImgUrl: '../assets/img/photo-mosaic-videos.png',
@@ -75,8 +105,12 @@ export const POSSIBLE_CONTENT: Content[] = [
   },
   {
     id: 6,
-    liveLink: null, 
-    githubLink: '',
+    links: [
+      {
+        linkType: LINK_TYPES.GIT,
+        url: ''
+      }
+    ],
     urlName: SubMenuItemsEnum.DHCP_LEASE_MANAGEMENT,
     displayName: 'DHCP\nLease\nManagemnet',
     bannerImgUrl: '../assets/img/wustl.png',
@@ -87,8 +121,12 @@ export const POSSIBLE_CONTENT: Content[] = [
   },
   {
     id: 7,
-    liveLink: null, 
-    githubLink: '',
+    links: [
+      {
+        linkType: LINK_TYPES.GIT,
+        url: ''
+      }
+    ],
     urlName: SubMenuItemsEnum.ACCESS_POINT_MONITORING,
     displayName: 'Access\nPoint\nMonitoring',
     bannerImgUrl: '../assets/img/wustl.png',
@@ -99,8 +137,12 @@ export const POSSIBLE_CONTENT: Content[] = [
   },
   {
     id: 8,
-    liveLink: null, 
-    githubLink: '',
+    links: [
+      {
+        linkType: LINK_TYPES.GIT,
+        url: ''
+      }
+    ],
     urlName: SubMenuItemsEnum.FACE_DETECTION,
     displayName: 'C++\nFace\nDetection',
     bannerImgUrl: '../assets/img/face-detection.png',

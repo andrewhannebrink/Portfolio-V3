@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core'; 
-import { Content, POSSIBLE_CONTENT } from './content';
+import { Content, POSSIBLE_CONTENT, LINK_TYPES } from './content';
 import { ActivatedRoute, Router }   from '@angular/router';
 import 'rxjs/add/operator/pluck';
 //import { Apollo } from 'apollo-angular';
@@ -38,6 +38,21 @@ export class ContentComponent implements OnInit {
       styleStr = 'left bottom'
     }
     return styleStr;
+  }
+
+  public getIconBackgroundClass(linkObj: { linkType: string, url: string }): string {
+    const type = linkObj.linkType;
+    if (type === LINK_TYPES.GIT) {
+      return 'github-icon';
+    } else if (type === LINK_TYPES.LIVE) {
+      return 'live-link-icon';
+    } else if (type === LINK_TYPES.TWITTER) {
+      return 'twitter-icon';
+    } else if (type === LINK_TYPES.VIMEO) {
+      return 'vimeo-icon';
+    } else {
+      return 'live-link-icon';
+    }
   }
 
   constructor(private route: ActivatedRoute) {
