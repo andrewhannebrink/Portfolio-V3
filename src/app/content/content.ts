@@ -129,7 +129,7 @@ export const POSSIBLE_CONTENT: Content[] = [
       }
     ],
     urlName: SubMenuItemsEnum.DHCP_LEASE_MANAGEMENT,
-    displayName: 'DHCP\nLease\nManagemnet',
+    displayName: 'DHCP\nLease\nManagement',
     bannerImgUrl: '../assets/img/wustl.png',
     year: '2014',
     scope: 'Network Engineering, Server-Side Scripting, Database Administration, Automation, Command Line Tooling',
