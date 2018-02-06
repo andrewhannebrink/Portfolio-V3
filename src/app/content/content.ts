@@ -57,7 +57,7 @@ export const POSSIBLE_CONTENT: Content[] = [
     year: '2015',
       scope: 'Image Processing, Full-Stack Web Development, API Construction, UI/UX Design, SaaS, Server-Side Automation',
     technologies: 'Angular 1, Express, Python, PIL, HTML, Canvas, CSS',
-    description: "●\n\n●\n\n●\n\n●"
+    description: "● Designed AngularJS front-end for users to upload photos to make their own photo-mosaic images, communicated with a Node.js and Express server with a Mongo database.\n\n● Refactored previous iteration into mobile-optimized version of tinyicon.co using HTML5 Canvas and Backbone.\n\n● Improved load time by 65% by sending pre-calculated average RGB values in static JSON files."
   },
   {
     id: 3,
@@ -118,7 +118,7 @@ export const POSSIBLE_CONTENT: Content[] = [
     year: '2014',
     scope: 'Video Processing, Video Art, System Process Automation',
     technologies: 'Python, PIL, ffmpeg',
-    description: "●\n\n●\n\n●\n\n●"
+    description: "● Produced video content for Blackdove's motion art platform and product launch at Miami Art Basel 2014.\n\n● Wrote Python software for re-editing mp4s as photo-mosaic videos using ffmpeg and Python's PIL module."
   },
   {
     id: 6,
@@ -134,7 +134,7 @@ export const POSSIBLE_CONTENT: Content[] = [
     year: '2014',
     scope: 'Network Engineering, Server-Side Scripting, Database Administration, Automation, Command Line Tooling',
     technologies: 'Python, SQL, Infoblox API',
-    description: ""
+    description: "These are Python scripts for parsing infoblox DHCP log files, saving DHCPACK events into a bi-relational MySQL database, searching that database dynamically using a number of search parameter options, and automatically updating Infoblox DHCP lease expiration dates given the user's last DHCPACK event. In 2014, these scripts allowed Washington University In St Louis’s System Administrators to automatically extend DHCP leases three months from a given users most recent network sign-in, as opposed to the default setting, three months from the DHCP lease publication. As a result, thousands of hours were saved across tens of thousands of students who would have otherwise needlessly re-authenticated through the Infoblox captive portal for years to come."
   },
   {
     id: 7,
@@ -150,7 +150,7 @@ export const POSSIBLE_CONTENT: Content[] = [
     year: '2014',
     scope: 'Network Engineering, Server-Side Scripting, Database Administration, Automation, Command Line Tooling',
     technologies: 'Python, SQL, Cisco Controller API',
-    description: "   These are Python scripts I wrote for Washington University's system administrators and security analysts. In 2014, the university’s Network Operating Center was overseeing a shift from Meru to Cisco wireless routing equipment. During this transition, though, they found themselves writing a mess of repetitive commands across the Cisco and Meru API’s for performance monitoring. To ease this pain, I wrote these scripts to automate the process of session lookup across networks. After completion, instead of repeatedly signing in out of convoluted 3rd-party CLI’s everytime we wanted to perform a network check, we could perform dynamic user lookups for either Meru or Cisco systems all from one command-line system. Used over the course of a year as we completed the transition to Cisco equipment, these scripts saved the university an estimated $25,000 in labor time."
+    description: "These are Python scripts I wrote for Washington University's system administrators and security analysts. In 2014, the university’s Network Operating Center was overseeing a shift from Meru to Cisco wireless routing equipment. During this transition, though, they found themselves writing a mess of repetitive commands across the Cisco and Meru API’s for performance monitoring. To ease this pain, I wrote these scripts to automate the process of session lookup across networks. After completion, instead of repeatedly signing in out of convoluted 3rd-party CLI’s everytime we wanted to perform a network check, we could perform dynamic user lookups for either Meru or Cisco systems all from one command-line system. Used over the course of a year as we completed the transition to Cisco equipment, these scripts saved the university an estimated $25,000 in labor time."
   },
   {
     id: 8,
