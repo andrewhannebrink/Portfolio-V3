@@ -636,12 +636,51 @@ strong {
   justify-content: space-between;
 }
 
+.services-flex:hover {
+  background-color: $color5 !important;
+}
+
 .services-flex-left {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.full-stack-border {
+  border-right: 5px solid $color3;
+}
+
+.creative-border {
+  border-right: 5px solid $color4;
+}
+
+.consulting-border {
+  border-right: 5px solid $color2;
+}
+
+.services-big-icon {
+  background-size: cover;
+  height: 100px;
+  width: 100px;
+}
+
+.consulting-icon {
+  background-image: url("../assets/img/handshake.svg");
+}
+
+.full-stack-icon {
+  background-image: url("../assets/img/full-stack.svg");
+}
+
+.creative-icon {
+  background-image: url("../assets/img/brain.svg");
 }
 
 .services-sub-statement {
-  margin-left: 15px;
+  margin-left: 10px;
   flex: 2;
 }
 
