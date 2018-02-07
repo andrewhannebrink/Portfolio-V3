@@ -544,6 +544,10 @@ strong {
   }
 }
 
+.content .square {
+  margin-bottom: 15px;
+}
+
 .content p {
   white-space: pre-wrap;
   font-size: 18px;
@@ -610,6 +614,21 @@ strong {
   }
 }
 
+.services-full-stack {
+  background-color: $color7;
+  color: $color3;
+}
+
+.services-consulting {
+  background-color: $color3;
+  color: $color2;
+}
+
+.services-creative {
+  background-color: $color1;
+  color: $color4;
+}
+
 .live-link-icon {
   background-color: $color1;
   background-image: url("../assets/img/link.svg");
@@ -665,6 +684,7 @@ strong {
 }
 
 .size3 {
+  font-weight: bold;
   /* Smartphones (landscape) ----------- */
   @media only screen and (min-width : 321px) {
     font-size: 5.5vw;

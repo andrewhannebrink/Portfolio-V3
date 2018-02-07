@@ -280,7 +280,7 @@ export const POSSIBLE_CONTENT: Content[] = [
     year: null,
     scope: null, 
     technologies: null,
-    description: ""
+    description: `<div class="services-consulting services-flex square"><div class="size3">Consulting</div><div>blah blah</div></div><div class="services-full-stack services-flex square"><div class="size3">Full-Stack</div><div></div>blah blah</div><div class="services-creative services-flex square"><div class="size3">Creative</div><div>blah blah</div></div>`
   }
 ];
 
