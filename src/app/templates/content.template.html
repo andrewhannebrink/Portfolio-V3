@@ -2,9 +2,9 @@
   <div class="content-title-words">
     <h1 class="content-header">{{ currentContent.displayName }}</h1>
     <div class="content-sub-title tiny">
-      <strong>Year</strong><br>{{ currentContent.year }}<br><br>
-      <strong>Scope</strong><br>{{ currentContent.scope }}<br><br>
-      <strong>Technologies</strong><br>{{ currentContent.technologies }}
+      <ng-container *ngFor="let subTitleObj of currentContent.subTitles">
+        <strong>{{ subTitleObj.subTitleType }}</strong><br>{{ subTitleObj.subTitle }}<br><br>
+      </ng-container>
     </div>
   </div>
   <div class="content-title-images">
