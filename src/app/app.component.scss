@@ -614,6 +614,21 @@ strong {
   }
 }
 
+.services-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.services-flex-left {
+  flex: 1;
+}
+
+.services-sub-statement {
+  margin-left: 15px;
+  flex: 2;
+}
+
 .services-full-stack {
   background-color: $color7;
   color: $color3;
