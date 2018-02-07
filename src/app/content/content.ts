@@ -428,7 +428,12 @@ export const POSSIBLE_CONTENT: Content[] = [
     urlName: SubMenuItemsEnum.SERVICES,
     displayName: 'Services\n&\nExpertise',
     bannerImgUrl: '../assets/img/services.png',
-    subTitles: [],
+    subTitles: [
+      {
+        subTitleType: null,
+        subTitle: "Web development is hard. Establishing yourself online shouldn't be. I'm here to help."
+      }
+    ],
     description: `<div class="services-consulting services-flex square"><div class="services-flex-left consulting-border"><div class="size3">Consulting</div><div class="services-big-icon consulting-icon"></div></div><div class="services-sub-statement">I'm a tech-first consultant. My process works backwards from the business problems you're facing, deriving solutions that build value.</div></div><div class="services-full-stack services-flex square"><div class="services-flex-left full-stack-border"><div class="size3">Full-Stack</div><div class="services-big-icon full-stack-icon"></div></div><div class="services-sub-statement">blah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blah</div></div><div class="services-creative services-flex square"><div class="services-flex-left creative-border"><div class="size3">Creative</div><div class="services-big-icon creative-icon"></div></div><div class="services-sub-statement">blah blah af wei we qoiq qweu  qweuiq q qiuew qewi qi e f wif weiiw ef iqwf qwi qwi wifjejewfn  wefjn a widfi w</div></div>`
   }
 ];
