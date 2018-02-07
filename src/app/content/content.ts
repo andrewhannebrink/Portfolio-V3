@@ -6,13 +6,11 @@ export class Content {
   displayName: string;
   bannerImgUrl: string;
   subTitles: any[];
-  scope: string;
-  year: string;
-  technologies: string;
   description: string;
 };
 
 const SUB_TITLE_TYPES = {
+  LOCATION: 'Location',
   SCOPE: 'Scope',
   TECHNOLOGIES: 'Technologies',
   TITLE: 'Title',
@@ -49,15 +47,13 @@ export const POSSIBLE_CONTENT: Content[] = [
       },
       {
         subTitleType: SUB_TITLE_TYPES.SCOPE,
-        subTitle: ''
+        subTitle: 'Data-Visualization, Real-Time Data Analysis, Full-Stack Web Development'
       },
       {
         subTitleType: SUB_TITLE_TYPES.TECHNOLOGIES,
-        subTitle: ''
+        subTitle: 'D3.js, Express, MongoDB, Twitter API'
       }
     ],
-      scope: 'Data-Visualization, Real-Time Data Analysis, Full-Stack Web Development',
-      technologies: 'D3.js, Express, MongoDB, Twitter API',
     description: "This data visualization depicts 1,200 of the most frequent emoji combinations on Twitter. Emojis that are tweeted more often appear larger, and emojis that appear together more often are connected by the boldest red lines. The emojis are limited to 8 connections per icon. To get a closer look at some of the connections, you can stretch apart the graph by dragging the icons."
   },
   {
@@ -75,21 +71,18 @@ export const POSSIBLE_CONTENT: Content[] = [
     urlName: SubMenuItemsEnum.TINYICON,
     displayName: 'TinyIcon\nMosaic\nSelector',
     bannerImgUrl: '../assets/img/tiny_icon.png',
-    //year: '2015',
-    //scope: 'Image Processing, Full-Stack Web Development, API Construction, UI/UX Design, SaaS, Server-Side Automation',
-    //technologies: 'Angular 1, Express, Python, PIL, HTML, Canvas, CSS',
     subTitles: [
       {
         subTitleType: SUB_TITLE_TYPES.YEAR,
-        subTitle: ''
+        subTitle: '2015'
       },
       {
         subTitleType: SUB_TITLE_TYPES.SCOPE,
-        subTitle: ''
+        subTitle: 'Image Processing, Full-Stack Web Development, API Construction, UI/UX Design, SaaS, Server-Side Automation'
       },
       {
         subTitleType: SUB_TITLE_TYPES.TECHNOLOGIES,
-        subTitle: ''
+        subTitle: 'Angular 1, Express, Python, PIL, HTML, Canvas, CSS'
       }
     ],
     description: "● Designed AngularJS front-end for users to upload photos to make their own photo-mosaic images, communicated with a Node.js and Express server with a Mongo database.\n\n● Refactored previous iteration into mobile-optimized version of tinyicon.co using HTML5 Canvas and Backbone.\n\n● Improved load time by 65% by sending pre-calculated average RGB values in static JSON files."
@@ -110,21 +103,18 @@ export const POSSIBLE_CONTENT: Content[] = [
     urlName: SubMenuItemsEnum.THREE_D_SCRIPTING,
     displayName: '3D\nScripting\nWith\nBlender',
     bannerImgUrl: '../assets/img/three-d-scripting.png',
-    //year: '2015',
-    //scope: 'Video Art, Euclidean Geometry, Matrix Algebra, Object Oriented Programming',
-    //technologies: 'Python, Blender, bpl (Blender-Python Module)',
     subTitles: [
       {
         subTitleType: SUB_TITLE_TYPES.YEAR,
-        subTitle: ''
+        subTitle: '2015'
       },
       {
         subTitleType: SUB_TITLE_TYPES.SCOPE,
-        subTitle: ''
+        subTitle: 'Video Art, Euclidean Geometry, Matrix Algebra, Object Oriented Programming'
       },
       {
         subTitleType: SUB_TITLE_TYPES.TECHNOLOGIES,
-        subTitle: ''
+        subTitle: 'Python, Blender, bpl (Blender-Python Module)'
       }
     ],
     description: "This script-generated video is an experiment in 3D video coding, performed with Python, Blender, and the Blender-Python \”bpy\” module. Nothing too crazy. Just having fun here."
@@ -144,21 +134,18 @@ export const POSSIBLE_CONTENT: Content[] = [
     urlName: SubMenuItemsEnum.TWITTER_BOT,
     displayName: 'Photo-Mosaic\nTwitter\nBot',
     bannerImgUrl: '../assets/img/tiny_peon.png',
-    //year: '2015 - Present',
-    //scope: 'Image Processing, Viral Marketing, Back-End Web Development, Twitter API, Server-Side Automation',
-    //technologies: 'JavaScript, Node, Python, PIL, AWS, EC2, Crontab',
     subTitles: [
       {
         subTitleType: SUB_TITLE_TYPES.YEAR,
-        subTitle: ''
+        subTitle: '2015 - Present'
       },
       {
         subTitleType: SUB_TITLE_TYPES.SCOPE,
-        subTitle: ''
+        subTitle: 'Image Processing, Viral Marketing, Back-End Web Development, Twitter API, Server-Side Automation'
       },
       {
         subTitleType: SUB_TITLE_TYPES.TECHNOLOGIES,
-        subTitle: ''
+        subTitle: 'JavaScript, Node, Python, PIL, AWS, EC2, Crontab'
       }
     ],
     description: "● Engineered high-traffic Twitter bot (~15k tweets/month, >100k lifetime tweets, >10k followers) that processes emoji photo-mosaics of each image tweeted to it using Python Imaging Library and npm Twit module.\n\n● Rate-limited tweets and queued them in MongoDB for delayed reply when experiencing high-traffic."
@@ -178,21 +165,18 @@ export const POSSIBLE_CONTENT: Content[] = [
     urlName: SubMenuItemsEnum.PHOTO_MOSAIC_VIDEOS,
     displayName: 'Photo-Mosaic\nVideos',
     bannerImgUrl: '../assets/img/photo-mosaic-videos.png',
-    //year: '2014',
-    //scope: 'Video Processing, Video Art, System Process Automation',
-    //technologies: 'Python, PIL, ffmpeg',
     subTitles: [
       {
         subTitleType: SUB_TITLE_TYPES.YEAR,
-        subTitle: ''
+        subTitle: '2014'
       },
       {
         subTitleType: SUB_TITLE_TYPES.SCOPE,
-        subTitle: ''
+        subTitle: 'Video Processing, Video Art, System Process Automation'
       },
       {
         subTitleType: SUB_TITLE_TYPES.TECHNOLOGIES,
-        subTitle: ''
+        subTitle: 'Python, PIL, ffmpeg'
       }
     ],
     description: "● Produced video content for Blackdove's motion art platform and product launch at Miami Art Basel 2014.\n\n● Wrote Python software for re-editing mp4s as photo-mosaic videos using ffmpeg and Python's PIL module."
@@ -208,21 +192,18 @@ export const POSSIBLE_CONTENT: Content[] = [
     urlName: SubMenuItemsEnum.DHCP_LEASE_MANAGEMENT,
     displayName: 'DHCP\nLease\nManagement',
     bannerImgUrl: '../assets/img/wustl.png',
-    //year: '2014',
-    //scope: 'Network Engineering, Server-Side Scripting, Database Administration, Automation, Command Line Tooling',
-    //technologies: 'Python, SQL, Infoblox API',
     subTitles: [
       {
         subTitleType: SUB_TITLE_TYPES.YEAR,
-        subTitle: ''
+        subTitle: '2014'
       },
       {
         subTitleType: SUB_TITLE_TYPES.SCOPE,
-        subTitle: ''
+        subTitle: 'Network Engineering, Server-Side Scripting, Database Administration, Automation, Command Line Tooling'
       },
       {
         subTitleType: SUB_TITLE_TYPES.TECHNOLOGIES,
-        subTitle: ''
+        subTitle: 'Python, SQL, Infoblox API'
       }
     ],
     description: "These are Python scripts for parsing infoblox DHCP log files, saving DHCPACK events into a bi-relational MySQL database, searching that database dynamically using a number of search parameter options, and automatically updating Infoblox DHCP lease expiration dates given the user's last DHCPACK event. In 2014, these scripts allowed Washington University In St Louis’s System Administrators to automatically extend DHCP leases three months from a given users most recent network sign-in, as opposed to the default setting, three months from the DHCP lease publication. As a result, thousands of hours were saved across tens of thousands of students who would have otherwise needlessly re-authenticated through the Infoblox captive portal for years to come."
@@ -238,21 +219,18 @@ export const POSSIBLE_CONTENT: Content[] = [
     urlName: SubMenuItemsEnum.ACCESS_POINT_MONITORING,
     displayName: 'Access\nPoint\nMonitoring',
     bannerImgUrl: '../assets/img/wustl.png',
-    //year: '2014',
-    //scope: 'Network Engineering, Server-Side Scripting, Database Administration, Automation, Command Line Tooling',
-    //technologies: 'Python, SQL, Cisco Controller API',
     subTitles: [
       {
         subTitleType: SUB_TITLE_TYPES.YEAR,
-        subTitle: ''
+        subTitle: '2014'
       },
       {
         subTitleType: SUB_TITLE_TYPES.SCOPE,
-        subTitle: ''
+        subTitle: 'Network Engineering, Server-Side Scripting, Database Administration, Automation, Command Line Tooling'
       },
       {
         subTitleType: SUB_TITLE_TYPES.TECHNOLOGIES,
-        subTitle: ''
+        subTitle: 'Python, SQL, Cisco Controller API'
       }
     ],
     description: "These are Python scripts I wrote for Washington University's system administrators and security analysts. In 2014, the university’s Network Operating Center was overseeing a shift from Meru to Cisco wireless routing equipment. During this transition, though, they found themselves writing a mess of repetitive commands across the Cisco and Meru API’s for performance monitoring. To ease this pain, I wrote these scripts to automate the process of session lookup across networks. After completion, instead of repeatedly signing in out of convoluted 3rd-party CLI’s everytime we wanted to perform a network check, we could perform dynamic user lookups for either Meru or Cisco systems all from one command-line system. Used over the course of a year as we completed the transition to Cisco equipment, these scripts saved the university an estimated $25,000 in labor time."
@@ -268,21 +246,18 @@ export const POSSIBLE_CONTENT: Content[] = [
     urlName: SubMenuItemsEnum.FACE_DETECTION,
     displayName: 'C++\nFace\nDetection',
     bannerImgUrl: '../assets/img/face-detection.png',
-    //year: '2013',
-    //scope: 'Computer Vision, Matrix Algrebra, Feature Recogntion, Object Oriented Programming',
-    //technologies: 'C++',
     subTitles: [
       {
         subTitleType: SUB_TITLE_TYPES.YEAR,
-        subTitle: ''
+        subTitle: '2013'
       },
       {
         subTitleType: SUB_TITLE_TYPES.SCOPE,
-        subTitle: ''
+        subTitle: 'Computer Vision, Machine Learning, Matrix Algrebra, Feature Recogntion, Object Oriented Programming'
       },
       {
         subTitleType: SUB_TITLE_TYPES.TECHNOLOGIES,
-        subTitle: ''
+        subTitle: 'C++'
       }
     ],
     description: `<div>This is a write-up I did for a C++ facial recognition project for my computer vision course. The source code for this project can be found here:
@@ -363,25 +338,26 @@ export const POSSIBLE_CONTENT: Content[] = [
     urlName: SubMenuItemsEnum.ZOOSK,
     displayName: 'Zoosk',
     bannerImgUrl: '../assets/img/zoosk.png',
-    //year: '2016 - 2017',
-    //scope: '',
-    //technologies: '',
     subTitles: [
       {
         subTitleType: SUB_TITLE_TYPES.TITLE,
-        subTitle: ''
+        subTitle: 'Front-End Software Engineer'
       },
       {
         subTitleType: SUB_TITLE_TYPES.YEAR,
-        subTitle: ''
+        subTitle: '2016 - 2017'
+      },
+      {
+        subTitleType: SUB_TITLE_TYPES.LOCATION,
+        subTitle: 'San Francisco, CA'
       },
       {
         subTitleType: SUB_TITLE_TYPES.SCOPE,
-        subTitle: ''
+        subTitle: 'High-Traffic Consumer-Facing Web Development, Mobile Browser Applications, Collaborative Engineering, Cross-Department Teamwork, Continuous Release Cycles, SaaS, Dynamic UI / UX Implementation, Agile Development, Strictly-Typed Front-End Environments'
       },
       {
         subTitleType: SUB_TITLE_TYPES.TECHNOLOGIES,
-        subTitle: ''
+        subTitle: 'JavaScript, Angular 1, Google Closure UI / Compiler, Node, ES5, ES6, HTML5, CSS3 Sass, Soy, Jenkins, PHP, SQL, JIRA'
       }
     ],
     description: "● Rapidly delivered features for the world’s 2nd largest dating platform with Angular, Node.js, and Google Closure UI/Library for desktop and mobile browsers in a continuous integration development cycle.\n\n● Implemented country-specific UI experiments that simplified profile interactions and improved user experience, resulting in 30% more accepted greetings, and 7% more bookings.\n\n● Led technical makeover of our Help Center which curtailed customer support emails, saving us from hiring a full-time employee, while still dynamically supplying users contact methods in 23 languages across 39 locales.\n\n● Won 1st place in company Hack Day by allowing users to donate to charities during special in-app purchases."
@@ -392,25 +368,26 @@ export const POSSIBLE_CONTENT: Content[] = [
     urlName: SubMenuItemsEnum.WICKR,
     displayName: 'Wickr',
     bannerImgUrl: '../assets/img/wickr.png',
-    //year: '2016',
-    //scope: '',
-    //technologies: '',
     subTitles: [
       {
         subTitleType: SUB_TITLE_TYPES.TITLE,
-        subTitle: ''
+        subTitle: 'Front-End Software Engineer'
       },
       {
         subTitleType: SUB_TITLE_TYPES.YEAR,
-        subTitle: ''
+        subTitle: '2016'
+      },
+      {
+        subTitleType: SUB_TITLE_TYPES.LOCATION,
+        subTitle: 'San Francisco, CA'
       },
       {
         subTitleType: SUB_TITLE_TYPES.SCOPE,
-        subTitle: ''
+        subTitle: 'Collaborative Engineering, Live Video Conferencing Software, Real-Time Data Sharing, Front-End Security & Attack Mitigation, Object Oriented Programming, Unit Testing, Agile Development'
       },
       {
         subTitleType: SUB_TITLE_TYPES.TECHNOLOGIES,
-        subTitle: ''
+        subTitle: 'JavaScript, Angular 1, Node, Express, Jasmine, ES6, Gulp, Babel, WebRTC, Licode, IOS, Docker, Redmine'
       }
     ],
     description: "● Worked in a 6-engineer team to develop a web and iOS app for video conferencing, live document and image sharing, and synchronized video streaming using AngularJS, WebRTC via Licode, and UI-Bootstrap.\n\n● Greatly reduced vectors for XSS attacks by 99.9% by architecting app-wide form validation using combination of custom and existing Angular directives for sanitizing inputs and whitelisting characters.\n\n● Followed JavaScript OOP principles to create module for panning and zooming through content in real time.\n\n● Migrated front-end build and unit test processes from Grunt to Gulp, enabling us to build with ES6 via Babel.\n\n● Constructed E2E and unit tests for deployed API instances using Jasmine, automating the tasks with Grunt.\n\n● Enabled users to switch cameras, microphones, and external speakers using the WebRTC API.\n\n● Implemented in-browser keyboard shortcuts for navigating menus, browsing content, and controlling videos."
@@ -421,25 +398,26 @@ export const POSSIBLE_CONTENT: Content[] = [
     urlName: SubMenuItemsEnum.TWIN_PRIME,
     displayName: 'Twin\nPrime',
     bannerImgUrl: '../assets/img/twin-prime.png',
-    //year: '2014 - 2015',
-    //scope: '',
-    //technologies: '',
     subTitles: [
       {
         subTitleType: SUB_TITLE_TYPES.TITLE,
-        subTitle: ''
+        subTitle: 'Software Engineer'
       },
       {
         subTitleType: SUB_TITLE_TYPES.YEAR,
-        subTitle: ''
+        subTitle: '2014 - 2015'
+      },
+      {
+        subTitleType: SUB_TITLE_TYPES.LOCATION,
+        subTitle: 'Redwood City, CA'
       },
       {
         subTitleType: SUB_TITLE_TYPES.SCOPE,
-        subTitle: ''
+        subTitle: 'Full-Stack Web Development, Collaborative Engineering, Data Visualization, User Authentication API\'s, Automated Email Systems, In-House Business Intelligence Software, Back-End Data Caching, Query / API Optimization, Global Geographic Data Representation, Agile Development'
       },
       {
         subTitleType: SUB_TITLE_TYPES.TECHNOLOGIES,
-        subTitle: ''
+        subTitle: 'Python, Django, PostgreSQL, JavaScript, Angular 1, Node, Express, MongoDB, D3.js, GeoJSON, Redis, JIRA, Pivotal Tracker, AWS, Amazon S3, Amazon EC2'
       }
     ],
     description: "● Followed scrum agile development methodology in a team of three engineers using Jira, and Pivotal Tracker to build a web dashboard for customers to visualize speed improvements of their mobile applications.\n\n● Developed RESTful user management API for new customer dashboard account activation, sign-in, sign-out, and password recovery using Python, Django and the Django Rest Framework.\n\n● Built custom Angular controllers and services for communication with user management and mobile data API’s.\n\n● Implemented user authentication with CSRF tokens, session cookies, and email password recovery.\n\n● Created Node.js API endpoints to dynamically build SQL queries to supply D3.js chart data, visualising mobile data pertaining to device type, network type, time interval, status codes, region, and apps.\n\n● Deployed Redis caching layer to decrease page load-time due to costly SQL queries, cutting load times from >20 seconds to <1 second for clients with ~100gb of data.\n\n● Improved internal response time to key customer events through a Jenkins-monitored email report system with a Python script pulling data from MongoDB, PostgreSQL, and Amazon S3, saving the company ~$20,000 yearly."
@@ -448,11 +426,8 @@ export const POSSIBLE_CONTENT: Content[] = [
     id: 12,
     links: [],
     urlName: SubMenuItemsEnum.SERVICES,
-    displayName: 'Web\n&\nConsulting',
+    displayName: 'Services\n&\nExpertise',
     bannerImgUrl: '../assets/img/services.png',
-    //year: null,
-    //scope: null, 
-    //technologies: null,
     subTitles: [],
     description: `<div class="services-consulting services-flex square"><div class="services-flex-left consulting-border"><div class="size3">Consulting</div><div class="services-big-icon consulting-icon"></div></div><div class="services-sub-statement">I'm a tech-first consultant. My process works backwards from the business problems you're facing, deriving solutions that build value.</div></div><div class="services-full-stack services-flex square"><div class="services-flex-left full-stack-border"><div class="size3">Full-Stack</div><div class="services-big-icon full-stack-icon"></div></div><div class="services-sub-statement">blah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blah</div></div><div class="services-creative services-flex square"><div class="services-flex-left creative-border"><div class="size3">Creative</div><div class="services-big-icon creative-icon"></div></div><div class="services-sub-statement">blah blah af wei we qoiq qweu  qweuiq q qiuew qewi qi e f wif weiiw ef iqwf qwi qwi wifjejewfn  wefjn a widfi w</div></div>`
   }
