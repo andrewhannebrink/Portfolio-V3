@@ -156,7 +156,7 @@ export const POSSIBLE_CONTENT: Content[] = [
       {
         linkType: LINK_TYPES.VIMEO,
         url: 'http://www.vimeo.com/tinyicon'
-      }
+      },
       {
         linkType: LINK_TYPES.GIT,
         url: 'https://github.com/andrewhannebrink/photo-mosaic-video-generator/blob/master/readme.md'
