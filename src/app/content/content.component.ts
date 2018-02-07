@@ -75,7 +75,7 @@ export class ContentComponent implements OnInit {
       try {
         this.getContent(params['urlName'])
       } catch (e){
-        this.currentContent = POSSIBLE_CONTENT[0];
+        this.currentContent = POSSIBLE_CONTENT[11];
       }
     })
   }
@@ -88,6 +88,6 @@ export class ContentComponent implements OnInit {
         currentContent = POSSIBLE_CONTENT[i];
       }
     }
-    this.currentContent = currentContent ? currentContent : POSSIBLE_CONTENT[0];
+    this.currentContent = currentContent ? currentContent : POSSIBLE_CONTENT[11];
   }
 }

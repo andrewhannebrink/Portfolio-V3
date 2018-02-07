@@ -225,7 +225,6 @@ export const MenuRelations = {
     SubMenuItemsEnum.ACCESS_POINT_MONITORING
   ],
   imageProcessing: [
-    SubMenuItemsEnum.EMOJI_DATA_VISUALIZER,
     SubMenuItemsEnum.TINYICON,
     SubMenuItemsEnum.TWITTER_BOT,
     SubMenuItemsEnum.PHOTO_MOSAIC_VIDEOS,
