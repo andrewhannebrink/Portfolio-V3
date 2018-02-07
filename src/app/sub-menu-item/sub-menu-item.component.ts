@@ -67,7 +67,7 @@ subMenuItemContentMasterObj[SubMenuItemsEnum.PHOTO_MOSAIC_VIDEOS] = {
   yearString: "14"  
 };
 subMenuItemContentMasterObj[SubMenuItemsEnum.SERVICES] = {
-  displayName: 'Services & Pricing',
+  displayName: 'Services & Expertise',
   yearString: ""  
 };
 subMenuItemContentMasterObj[SubMenuItemsEnum.THREE_D_SCRIPTING] = {
