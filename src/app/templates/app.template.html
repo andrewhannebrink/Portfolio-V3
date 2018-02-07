@@ -74,6 +74,7 @@
         *ngIf = "checkToShowSubMenuItem(subMenuItemName)"
         [subMenuItemName] = "subMenuItemName"
         (mouseover)="hoveredSubMenuItem=subMenuItemName" (mouseleave)="hoveredSubMenuItem=null"
+        (click)="scrollToContent()"
         [ngStyle]="getSubMenuItemStyle(subMenuItemName, currentSubMenu)"
         [ngClass]="{ 'size2': subMenuItemName === SubMenuItemsEnum.SERVICES }"
         routerLink="{{ subMenuItemName }}">
@@ -82,7 +83,7 @@
 
     </div>
   </div>
-  <div class="content">
+  <div id="content">
     <router-outlet></router-outlet>
   </div>
 </div>

@@ -104,6 +104,11 @@ export class AppComponent implements OnInit {
     return style;
   }
 
+  public scrollToContent(): void {
+    const el = document.getElementById("content");
+    el.scrollIntoView();
+  }
+
   public buildSubMenuItemStyle(currentSubMenu: string, subMenuItemName: string, 
       direction: string, startingGridPosition: string[], textColor: string, bgColor: string, bgColorHover: string): any { 
     let gridPosition: string[];
