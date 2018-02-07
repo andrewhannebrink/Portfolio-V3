@@ -25,6 +25,7 @@ export class ContentComponent implements OnInit {
     bannerImgUrl = this.currentContent.bannerImgUrl;
 
     if (bannerImgUrl.includes('wustl') ||
+      bannerImgUrl.includes('services') ||
       bannerImgUrl.includes('twin-prime') ||
       bannerImgUrl.includes('zoosk') || 
       bannerImgUrl.includes('wickr')) {
@@ -38,6 +39,7 @@ export class ContentComponent implements OnInit {
     let styleStr = 'left top',
         bannerImgUrl = this.currentContent.bannerImgUrl;
     if (bannerImgUrl.includes('wustl') ||
+      bannerImgUrl.includes('services') ||
       bannerImgUrl.includes('twin-prime') ||
       bannerImgUrl.includes('zoosk') || 
       bannerImgUrl.includes('wickr')) {
